@@ -1,0 +1,20 @@
+{
+    "Portfolio": [
+        { "Project":"Sound of Speech" , "Tech":["PhoneGap","JavaScript", "HTML" ] },
+        { "Project":"Personalized Video" , "Tech":["PHP","JavaScript", "HTML", "Flash" ] },
+        { "Project":"MLST" , "Tech":["JavaScript","Flash"] }
+    ],
+    "Work": [
+        {"School":"University of Iowa", "Year":"2005-2013", "Title":"Application Developer"},
+        {"School":"Information in Place", "Year":"2004-2005", "Title":"Instructional Media Developer"},
+        {"School":"Option Six", "Year":"2003", "Title":"Flash Developer"},
+        {"School":"Boeing", "Year":"2000-2002", "Title":"Computer Artist"}
+    ],
+    "Education": [
+        {"School":"Indiana University", "Year":"2003-2005", "Degree":"Masters Instructional Systems Technology"},
+        {"School":"University Of Washington", "Year":"2003", "Degree":"Certificate Game Design"},
+        {"School":"University Of Iowa", "Year":"1995-2000", "Degree":"Studio Art, Computer Science"}
+    ],
+    "Awards": [
+    ]
+}
