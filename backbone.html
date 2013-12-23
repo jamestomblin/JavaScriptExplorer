@@ -19,12 +19,7 @@
         <script src="js/vendor/modernizr/modernizr-2.6.2.min.js"></script>
 
         <script src="js/vendor/jq/jq2.js"></script>
-        <script src="js/vendor/underscore/underscore.js"></script>
-        <script src="js/vendor/backbone/backbone1.1.js"></script>
 
-        <script src="js/vendor/backbone/models/model.js"></script>
-        <script src="js/vendor/backbone/views/view.js"></script>
-        <script src="js/vendor/backbone/app/app.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -34,12 +29,23 @@
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Boilerplate.</p>
 
+        <script type="text/template" id="portfolio-list-template">
+test
+          <%= test %>
+
+
+        </script>
 
         <div class='Container well'>
           <div id='portfolio-list-target'></div>
         <div>
 
+          <script src="js/vendor/underscore/underscore.js"></script>
+          <script src="js/vendor/backbone/backbone1.1.js"></script>
 
+          <script src="js/vendor/backbone/models/model.js"></script>
+          <script src="js/vendor/backbone/views/view.js"></script>
+          <script src="js/vendor/backbone/app/app.js"></script>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -51,5 +57,8 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
+
+
+
     </body>
 </html>

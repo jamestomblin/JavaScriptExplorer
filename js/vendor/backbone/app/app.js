@@ -27,7 +27,7 @@ app.AppRouter = Backbone.Router.extend({
     home:function(){
         console.log('test');
 
-        new app.PorfolioView();
+        new app.PortfolioView();
     }
 
 });
