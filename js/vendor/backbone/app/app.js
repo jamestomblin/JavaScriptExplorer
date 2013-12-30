@@ -13,9 +13,9 @@ app.AppRouter = Backbone.Router.extend({
 
     routes:{
         "":'home',
-        "porfolio":"portfolio",
+        'portfolio(/:loc)(/page:page)': 'portfolio',
         "education":"education",
-        "work":"work"
+        "awards":"awards"
     },
 
     initialize:function(){
@@ -24,14 +24,38 @@ app.AppRouter = Backbone.Router.extend({
 
     },
 
-    home:function(){
-        console.log('test');
 
-        new app.PortfolioView();
+
+    portfolio:function(loc, p){
+
+       // portView.load
+        console.log('show project');
+        console.log(loc);
+        console.log(p);
+        if(app.portView == undefined){
+            app.portView = new app.PortfolioView({loc:loc, page:p})
+
+        }else{
+            //app.portView.setContent({loc:loc, page:p});
+            app.portView.trigger('setContent',{loc:loc, page:p} )
+        }
+
+
+       // var data = {loc:loc, page:p};
+        //console.log(data);
+        //new app.ContentView(data);
+       // new app.PortfolioView();
     }
+
+
+
+
+
+
 
 });
 
+//var app.portView = new app.PortfolioView();
 
 var app_router = new app.AppRouter;
 

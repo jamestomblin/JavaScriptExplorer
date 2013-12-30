@@ -15,23 +15,15 @@ app.PorfolioModel = Backbone.Model.extend({
     defaults: {
         name: 'James Tomblin',
         age: 37,
-        email:"james.s.tomblin@gmail.com"
+        email:"james.s.tomblin@gmail.com",
+        title:"Designer/Developer/Artist/Educator"
     },
+    complete:false,
 
     initialize: function(){
 
         console.log('model made')
 
-        this.fetch({
-            url: "db/db.json",
-            success: function(e) {
-                console.log(e);
-            }.bind(this),
-            error: function(e){
-               // console.log(e);
-                console.log('There was some error in loading and processing the JSON file');
-            }
-        })
 
     }
 
