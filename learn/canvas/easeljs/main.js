@@ -7,11 +7,12 @@
  */
 canvas = document.getElementById("globe");
 var stage = new createjs.Stage(canvas);
-var num = 400;
-var num2 = 400;
+var num = 100;
+var num2 = 200;
 //var image = new createjs.Bitmap("img/flake.png");
 createjs.Ticker.addEventListener("tick", handleTick);
 createjs.Ticker.setFPS(60);
+createjs.useRAF = true;
 
 //ndgmr.DEBUG_COLLISION = true;
 
@@ -92,7 +93,7 @@ function handleTick(event) {
 
 
     for (var i=0; i<num; i++) {
-     //   move(arr[i]);
+        move(arr[i]);
     }
 
     for (var i=0; i<num2; i++) {
@@ -111,7 +112,7 @@ function move2(obj){
 //console.log(intersection);
     if(intersection){
      //   obj.x = 0;
-        speed = .2;
+        speed = .01;
         //  createjs.Ticker.removeEventListener("tick", handleTick);
     }else{
 
@@ -178,7 +179,7 @@ function random(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-//distributeImages(num);
+distributeImages(num);
 
 
 distributeImages2(num2);
