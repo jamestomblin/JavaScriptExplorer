@@ -29,23 +29,24 @@
 
         <!-- Add your site or application content here -->
 
-        <script type="text/template" id="portfolio-nav-template">
+        <script type="text/template" id="nav-template">
 
             <nav>
                 <ul>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#education">Education/Work</a></li>
+                  <li><a href="#work">Work History</a></li>
+                  <li><a href="#education">Education</a></li>
                     <li><a href="#process">Process</a></li>
                 </ul>
             </nav>
 
         </script>
 
-        <script type="text/template" id="portfolio-list-template">
+        <script type="text/template" id="list-template">
           <ul>
           <%  for(var i=0; i< data.length; i++){ %>
           <li>
-            <a href=<%= "#"+type+"/"+ i  +"/page1"%> > <%=  data[i].Name %></a>
+            <a href=<%= "#"+linkroute+"/"+ i  +"/page1"%> > <%=  data[i].Name %></a>
           </li>
           <%  }%>
           </ul>
@@ -76,18 +77,49 @@
 
         </script>
 
+
+        <script type="text/template" id="education-content-template">
+
+
+          <h2><%= data.Name+ " ("+data.Date+") " %></h2>
+          <h4><%= data.Degree %></h4>
+          <h4>Course Work:</h4>
+
+
+        </script>
+
+        <script type="text/template" id="process-content-template">
+
+
+          <h2><%= data.Name %></h2>
+          <h4><%= data.About %></h4>
+
+
+
+        </script>
+
+        <script type="text/template" id="work-content-template">
+
+
+          <h2><%= data.Name+ " ("+data.Date+") " %></h2>
+          <h4><%= data.Title %></h4>
+
+
+
+        </script>
+
         <div class='Container'>
-          <div id='portfolio-nav-target'></div>
+          <div id='nav-target'></div>
           <div>
 
         <div class='Container'>
-          <div id='portfolio-list-target'></div>
+          <div id='list-target'></div>
 
             <div id='result'></div>
         <div>
 
        <div class='Container'>
-          <div id='portfolio-content-target'></div>
+          <div id='content-target'></div>
         <div>
 
         <script src="js/vendor/underscore/underscore.js"></script>

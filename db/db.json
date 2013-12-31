@@ -1,5 +1,5 @@
 {
-"Portfolio": [
+"portfolio": [
 { "Name":"Sounds of Speech" , "Date":"2013" ,"Tech":["PhoneGap","JavaScript", "HTML", "CreateJS" ], "About":["Project Info"],"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
 { "Name":"Mobile Game Development" , "Date":"2013" ,"Tech":["Adobe Air","Starling", "FeatherUI" ], "About":["Project Info"],"Examples":["image1.jpg"]},
 { "Name":"Personalized Video" ,"Date":"2013" , "Tech":["PHP","JavaScript", "HTML", "Flash" ], "About":["Project Info"],"Examples":["image1.jpg"] },
@@ -17,23 +17,23 @@
 { "Name":"Krispy Kreme" , "Date":"2013" ,"Tech":["Photoshop","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
 { "Name":"Boeing" , "Date":"2001" ,"Tech":["Maya","Flash", "Photoshop"] , "About":["Project Info"], "Examples":["image1.jpg"]}
 ],
-"Work": [
+"work": [
 {"Name":"University of Iowa", "Date":"2005-2013", "Title":"Application Developer" },
 {"Name":"Information in Place", "Date":"2004-2005", "Title":"Instructional Media Developer"},
 {"Name":"Option Six", "Date":"2003", "Title":"Flash Developer"},
 {"Name":"Boeing", "Date":"2000-2002", "Title":"Computer Artist"}
 ],
-"Education": [
-{"Name":"Indiana University", "Year":"2003-2005", "Degree":"Masters Instructional Systems Technology"},
-{"Name":"University Of Washington", "Year":"2003", "Degree":"Certificate Game Design"},
-{"Name":"University Of Iowa", "Year":"1995-2000", "Degree":"Studio Art, Computer Science"}
+"education": [
+{"Name":"Indiana University", "Date":"2003-2005", "Degree":"Masters Instructional Systems Technology"},
+{"Name":"University Of Washington", "Date":"2003", "Degree":"Certificate Game Design"},
+{"Name":"University Of Iowa", "Date":"1995-2000", "Degree":"Studio Art, Computer Science"}
 ],
-"Publications": [
-{"Name":"Indiana University", "Year":"2003-2005", "Degree":"Masters Instructional Systems Technology"},
-{"Name":"University Of Washington", "Year":"2003", "Degree":"Certificate Game Design"},
-{"Name":"University Of Iowa", "Year":"1995-2000", "Degree":"Studio Art, Computer Science"}
+"publications": [
+{"Name":"Indiana University", "Date":"2003-2005", "Degree":"Masters Instructional Systems Technology"},
+{"Name":"University Of Washington", "Date":"2003", "Degree":"Certificate Game Design"},
+{"Name":"University Of Iowa", "Date":"1995-2000", "Degree":"Studio Art, Computer Science"}
 ],
-"Process": [
+"process": [
 {"Name":"Analysis", "About":"Design Philosphy" },
 {"Name":"Design", "About":"Design Philosphy" },
 {"Name":"Development", "About":"Development Philosophy" },
