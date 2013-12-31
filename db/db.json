@@ -1,42 +1,43 @@
 {
 "Portfolio": [
-{ "Project":"Sounds of Speech" , "Date":"2013" ,"Tech":["PhoneGap","JavaScript", "HTML", "CreateJS" ], "About":["Project Info"],"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-{ "Project":"Mobile Game Development" , "Date":"2013" ,"Tech":["Adobe Air","Starling", "FeatherUI" ], "About":["Project Info"],"Examples":["image1.jpg"]},
-{ "Project":"Personalized Video" ,"Date":"2013" , "Tech":["PHP","JavaScript", "HTML", "Flash" ], "About":["Project Info"],"Examples":["image1.jpg"] },
-{ "Project":"MLST" , "Date":"2013" ,"Tech":["JavaScript","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
-{ "Project":"BONGO" , "Date":"2013" ,"Tech":["JavaScript","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
-{ "Project":"Study Abroad" ,"Date":"2013" , "Tech":["JavaScript","PHP","Filemaker"] , "About":["Project Info"], "Examples":["image1.jpg"]},
-{ "Project":"Social Video" , "Date":"2013" ,"Tech":["JavaScript","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
-{ "Project":"IGEC" , "Date":"2013" ,"Tech":["JavaScript","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
-{ "Project":"Radiology" , "Date":"2013" ,"Tech":["Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
-{ "Project":"Media Players" , "Date":"2013" ,"Tech":["JavaScript","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
-{ "Project":"Second Life" , "Date":"2013" ,"Tech":[] , "About":["Project Info"], "Examples":["image1.jpg"]},
-{ "Project":"Dentistry" , "Date":"2013" ,"Tech":["Flash","Filemaker"] , "About":["Project Info"], "Examples":["image1.jpg"]},
-{ "Project":"Eli Lilly" , "Date":"2013" ,"Tech":["Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
-{ "Project":"DOD" , "Date":"2013" ,"Tech":["Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
-{ "Project":"Krispy Kreme" , "Date":"2013" ,"Tech":["Photoshop","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
-{ "Project":"Boeing" , "Date":"2001" ,"Tech":["Maya","Flash", "Photoshop"] , "About":["Project Info"], "Examples":["image1.jpg"]}
+{ "Name":"Sounds of Speech" , "Date":"2013" ,"Tech":["PhoneGap","JavaScript", "HTML", "CreateJS" ], "About":["Project Info"],"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+{ "Name":"Mobile Game Development" , "Date":"2013" ,"Tech":["Adobe Air","Starling", "FeatherUI" ], "About":["Project Info"],"Examples":["image1.jpg"]},
+{ "Name":"Personalized Video" ,"Date":"2013" , "Tech":["PHP","JavaScript", "HTML", "Flash" ], "About":["Project Info"],"Examples":["image1.jpg"] },
+{ "Name":"MLST" , "Date":"2013" ,"Tech":["JavaScript","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
+{ "Name":"BONGO" , "Date":"2013" ,"Tech":["JavaScript","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
+{ "Name":"Study Abroad" ,"Date":"2013" , "Tech":["JavaScript","PHP","Filemaker"] , "About":["Project Info"], "Examples":["image1.jpg"]},
+{ "Name":"Social Video" , "Date":"2013" ,"Tech":["JavaScript","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
+{ "Name":"IGEC" , "Date":"2013" ,"Tech":["JavaScript","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
+{ "Name":"Radiology" , "Date":"2013" ,"Tech":["Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
+{ "Name":"Media Players" , "Date":"2013" ,"Tech":["JavaScript","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
+{ "Name":"Second Life" , "Date":"2013" ,"Tech":[] , "About":["Project Info"], "Examples":["image1.jpg"]},
+{ "Name":"Dentistry" , "Date":"2013" ,"Tech":["Flash","Filemaker"] , "About":["Project Info"], "Examples":["image1.jpg"]},
+{ "Name":"Eli Lilly" , "Date":"2013" ,"Tech":["Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
+{ "Name":"DOD" , "Date":"2013" ,"Tech":["Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
+{ "Name":"Krispy Kreme" , "Date":"2013" ,"Tech":["Photoshop","Flash"] , "About":["Project Info"], "Examples":["image1.jpg"]},
+{ "Name":"Boeing" , "Date":"2001" ,"Tech":["Maya","Flash", "Photoshop"] , "About":["Project Info"], "Examples":["image1.jpg"]}
 ],
 "Work": [
-{"School":"University of Iowa", "Year":"2005-2013", "Title":"Application Developer" },
-{"School":"Information in Place", "Year":"2004-2005", "Title":"Instructional Media Developer"},
-{"School":"Option Six", "Year":"2003", "Title":"Flash Developer"},
-{"School":"Boeing", "Year":"2000-2002", "Title":"Computer Artist"}
+{"Name":"University of Iowa", "Date":"2005-2013", "Title":"Application Developer" },
+{"Name":"Information in Place", "Date":"2004-2005", "Title":"Instructional Media Developer"},
+{"Name":"Option Six", "Date":"2003", "Title":"Flash Developer"},
+{"Name":"Boeing", "Date":"2000-2002", "Title":"Computer Artist"}
 ],
 "Education": [
-{"School":"Indiana University", "Year":"2003-2005", "Degree":"Masters Instructional Systems Technology"},
-{"School":"University Of Washington", "Year":"2003", "Degree":"Certificate Game Design"},
-{"School":"University Of Iowa", "Year":"1995-2000", "Degree":"Studio Art, Computer Science"}
+{"Name":"Indiana University", "Year":"2003-2005", "Degree":"Masters Instructional Systems Technology"},
+{"Name":"University Of Washington", "Year":"2003", "Degree":"Certificate Game Design"},
+{"Name":"University Of Iowa", "Year":"1995-2000", "Degree":"Studio Art, Computer Science"}
 ],
 "Publications": [
-{"School":"Indiana University", "Year":"2003-2005", "Degree":"Masters Instructional Systems Technology"},
-{"School":"University Of Washington", "Year":"2003", "Degree":"Certificate Game Design"},
-{"School":"University Of Iowa", "Year":"1995-2000", "Degree":"Studio Art, Computer Science"}
+{"Name":"Indiana University", "Year":"2003-2005", "Degree":"Masters Instructional Systems Technology"},
+{"Name":"University Of Washington", "Year":"2003", "Degree":"Certificate Game Design"},
+{"Name":"University Of Iowa", "Year":"1995-2000", "Degree":"Studio Art, Computer Science"}
 ],
-"Awards": [
-],
-"About": [
-{"Design":"Indiana University", "About":"Design Philosphy" },
-{"Development":"University Of Washington", "About":"Development Philosophy" }
+"Process": [
+{"Name":"Analysis", "About":"Design Philosphy" },
+{"Name":"Design", "About":"Design Philosphy" },
+{"Name":"Development", "About":"Development Philosophy" },
+{"Name":"Implemenation", "About":"Development Philosophy" },
+{"Name":"Evaluation", "About":"Development Philosophy" }
 ]
 }

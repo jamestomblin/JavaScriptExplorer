@@ -9,42 +9,49 @@ var app = app || {};
 
 
 
+
+
 app.AppRouter = Backbone.Router.extend({
 
     routes:{
         "":'home',
         'portfolio(/:loc)(/page:page)': 'portfolio',
         "education":"education",
-        "awards":"awards"
+        "process":"process"
     },
 
     initialize:function(){
         console.log('init formset and list collection');
 
 
+
+        new app.NavView();
+
+
     },
 
+    process:function(loc, p){
 
+
+
+        new app.ProcessView( {model:app.model ,loc:loc, page:p});
+
+
+    },
+
+    education:function(loc, p){
+
+
+        new app.EducationView({ model:app.model ,loc:loc, page:p});
+
+    },
 
     portfolio:function(loc, p){
 
-       // portView.load
-        console.log('show project');
-        console.log(loc);
-        console.log(p);
-        if(app.portView == undefined){
-            app.portView = new app.PortfolioView({loc:loc, page:p})
 
-        }else{
-            //app.portView.setContent({loc:loc, page:p});
-            app.portView.trigger('setContent',{loc:loc, page:p} )
-        }
+        new app.PortfolioView({ model:app.model ,loc:loc, page:p})
 
 
-       // var data = {loc:loc, page:p};
-        //console.log(data);
-        //new app.ContentView(data);
-       // new app.PortfolioView();
     }
 
 
@@ -54,10 +61,9 @@ app.AppRouter = Backbone.Router.extend({
 
 
 });
-
-//var app.portView = new app.PortfolioView();
-
+app.model =  new app.PorfolioModel();
 var app_router = new app.AppRouter;
+
 
 $(function(){
 

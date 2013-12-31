@@ -16,13 +16,16 @@ app.PorfolioModel = Backbone.Model.extend({
         name: 'James Tomblin',
         age: 37,
         email:"james.s.tomblin@gmail.com",
-        title:"Designer/Developer/Artist/Educator"
+        title:"Designer/Developer/Artist/Educator",
+        complete:false
     },
     complete:false,
 
     initialize: function(){
 
-        console.log('model made')
+        console.log('model made');
+
+
 
 
     }
