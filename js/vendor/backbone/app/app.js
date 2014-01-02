@@ -15,7 +15,7 @@ app.AppRouter = Backbone.Router.extend({
 
     routes:{
         "":'home',
-        'portfolio(/:loc)(/page:page)': 'portfolio',
+        'projects(/:loc)(/page:page)': 'projects',
         'education(/:loc)(/page:page)': 'education',
         'process(/:loc)(/page:page)': 'process',
         'work(/:loc)(/page:page)': 'work'
@@ -26,7 +26,7 @@ app.AppRouter = Backbone.Router.extend({
 
 
 
-        new app.NavView();
+       // new app.NavView();
 
 
     },
@@ -49,10 +49,10 @@ app.AppRouter = Backbone.Router.extend({
 
 
 
-    portfolio:function(loc, p){
+    projects:function(loc, p){
 
 
-        new app.MyView({ model:app.model ,loc:loc, page:p , linkroute:'portfolio'})
+        new app.MyView({ model:app.model ,loc:loc, page:p , linkroute:'projects'})
 
 
     },
@@ -73,6 +73,8 @@ app.AppRouter = Backbone.Router.extend({
 
 });
 app.model =  new app.PorfolioModel();
+
+
 var app_router = new app.AppRouter;
 
 

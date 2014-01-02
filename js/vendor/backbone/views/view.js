@@ -10,6 +10,49 @@ var app = app || {};
 
 
 
+function Usability(){
+
+  this.readability = function(string){
+
+
+        var arr = [];
+        var a = string;
+
+       // String.prototype.insertAt=function(index, string) {
+       //     return this.substr(0, index) + string + this.substr(index);
+       // }
+
+        for(var i= 0; i<string.length; i++){
+            if(i%45==0){
+                arr.push ( a.substring(i,i+45)  );
+
+            }
+        }
+
+        var finalString
+
+        for(var i = 0; i < arr.length; i++){
+
+            finalString += arr[i] + "<span id='readability'>X</span>";
+            console.log( finalString );
+
+        }
+
+        return finalString ;
+
+
+     // return string ;
+
+    }
+
+
+};
+
+app.usability =  new Usability();
+
+console.log(app.usability);
+
+
 app.NavView = Backbone.View.extend({
 
     el: $("#nav-target"),
@@ -89,9 +132,14 @@ app.MyView = Backbone.View.extend({
 
     contentRender:function(data){
 
+
+        var usablity = true;
+       this.model.attributes[this.options.linkroute][data.loc].About = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repella";
+
+
         switch(this.options.linkroute)
         {
-            case 'portfolio':
+            case 'projects':
                 console.log('render content');
                 this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][data.loc]}) );
                 break;
@@ -110,7 +158,9 @@ app.MyView = Backbone.View.extend({
 
         }
 
-    }
+    },
+
+
 
 
 });
