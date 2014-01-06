@@ -35,7 +35,7 @@ app.AppRouter = Backbone.Router.extend({
 
 
 
-        new app.MyView( {model:app.model ,loc:loc, page:p, linkroute:'process' });
+        app.view=  new app.MyView( {model:app.model ,loc:loc, page:p, linkroute:'process' });
 
 
     },
@@ -43,7 +43,7 @@ app.AppRouter = Backbone.Router.extend({
     education:function(loc, p){
 
 
-        new app.MyView({ model:app.model ,loc:loc, page:p , linkroute:'education'});
+        app.view = new app.MyView({ model:app.model ,loc:loc, page:p , linkroute:'education'});
 
     },
 
@@ -51,8 +51,8 @@ app.AppRouter = Backbone.Router.extend({
 
     projects:function(loc, p){
 
-
-        new app.MyView({ model:app.model ,loc:loc, page:p , linkroute:'projects'})
+        new app.NavView();
+        app.view = new app.MyView({ model:app.model ,loc:loc, page:p , linkroute:'projects'})
 
 
     },
@@ -60,7 +60,7 @@ app.AppRouter = Backbone.Router.extend({
     work:function(loc, p){
 
 
-        new app.MyView({ model:app.model ,loc:loc, page:p , linkroute:'work'})
+        app.view = new app.MyView({ model:app.model ,loc:loc, page:p , linkroute:'work'})
 
 
     }
@@ -73,7 +73,8 @@ app.AppRouter = Backbone.Router.extend({
 
 });
 app.model =  new app.PorfolioModel();
-
+var view = {};
+app.view = view;
 
 var app_router = new app.AppRouter;
 

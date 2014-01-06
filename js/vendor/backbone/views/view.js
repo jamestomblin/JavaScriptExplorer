@@ -58,6 +58,9 @@ app.NavView = Backbone.View.extend({
     el: $("#nav-target"),
     // Compile the template using underscore
     template : _.template( $("#nav-template").html() ),
+    footer_el: $("#footer-target"),
+    // Compile the template using underscore
+    footer_template : _.template( $("#footer-template").html() ),
 
     initialize: function(options){
 
@@ -65,8 +68,28 @@ app.NavView = Backbone.View.extend({
         this.render();
     },
 
+
+    footer:[
+    {"Name":"javascript",  "Frameworks":["BackBone.js", "AngularJS"] },
+        {"Name":"HTML5", "About":"PhoneGap" },
+        {"Name":"flash", "About":"OSMF" },
+        {"Name":"css", "About":"" },
+    {"Name":"photoshop", "About":"" },
+    {"Name":"maya", "About":"" },
+    {"Name":"backbone", "About":"" },
+    {"Name":"angular", "About":"" },
+    {"Name":"adobeair", "About":"" },
+    {"Name":"starling", "About":"" },
+    {"Name":"codeigniter", "About":"" },
+    {"Name":"phonegap", "About":"" },
+    {"Name":"createjs", "About":"" },
+    {"Name":"php", "About":"Codeigniter" }
+
+    ],
+
     render:function(){
-        this.$el.html( this.template() );
+      //  this.$el.html( this.template() );
+        this.footer_el.html( this.footer_template({data:this.footer}) );
     }
 
 });
@@ -86,6 +109,17 @@ app.MyView = Backbone.View.extend({
 
     initialize: function(options){
 
+        $('#md-close').click(function() {
+
+            this.hideModal()
+
+        }.bind(this));
+
+
+        $('#md-overlay').click(function() {
+            this.hideModal()
+        }.bind(this));
+
         this.options = options || {};
         this.listenTo(this.model,'change', this.listrender);
         this.on('setContent', this.contentRender);
@@ -99,6 +133,8 @@ app.MyView = Backbone.View.extend({
                 console.log(this.model);
                 //console.log(this.options);
                 if(this.options.loc != undefined ){
+
+
 
                     this.trigger('setContent', this.options );
                 }
@@ -122,35 +158,54 @@ app.MyView = Backbone.View.extend({
 
     },
 
+    open : function () {
+
+
+
+    },
+
 
     listrender:function(){
+
+        $('#modal-1').css('visibility','hidden');
+        $('#md-overlay').css('visibility','hidden');
 
         this.list_el.html( this.list_template({data:this.model.attributes[this.options.linkroute], linkroute:this.options.linkroute}) );
         this.content_el.html('');
 
     },
 
-    contentRender:function(data){
+    contentRender:function(){
 
+var string = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repella";
 
-        var usablity = true;
-       this.model.attributes[this.options.linkroute][data.loc].About = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repella";
+    //   alert('cool');
+///*
 
+        $('#modal-1').css('visibility','hidden');
+
+       var usablity = true;
+       this.model.attributes[this.options.linkroute][this.options.loc].About = string + string;
 
         switch(this.options.linkroute)
         {
             case 'projects':
                 console.log('render content');
-                this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][data.loc]}) );
+                this.showModal();
+
+                this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
                 break;
             case 'education':
-                this.content_el.html( this.education_content_template({data:this.model.attributes[this.options.linkroute][data.loc]}) );
+                this.showModal();
+                this.content_el.html( this.education_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
                 break;
             case 'process':
-                this.content_el.html( this.process_content_template({data:this.model.attributes[this.options.linkroute][data.loc]}) );
+                this.showModal();
+                this.content_el.html( this.process_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
                 break;
             case 'work':
-                this.content_el.html( this.work_content_template({data:this.model.attributes[this.options.linkroute][data.loc]}) );
+                this.showModal();
+                this.content_el.html( this.work_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
                 break;
             default:
                 // default code
@@ -158,7 +213,27 @@ app.MyView = Backbone.View.extend({
 
         }
 
+     //   */
+
     },
+
+    showModal:function(){
+
+        $('#modal-1').css('visibility','visible');
+        $('#modal-1').addClass('animated fadeIn');
+
+        $('#md-overlay').css('visibility','visible');
+
+
+    },
+
+    hideModal:function(){
+        $('#modal-1').removeClass('animated fadeIn');
+        $('#modal-1').css('visibility','hidden');
+        $('#md-overlay').css('visibility','hidden');
+
+
+    }
 
 
 

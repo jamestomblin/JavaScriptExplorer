@@ -11,6 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/animate-custom.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
       <link rel="stylesheet" href="css/custom.css">
@@ -35,15 +37,16 @@
 
         <script type="text/template" id="list-template">
 
-          <h2><%= linkroute%></h2>
+            <%  for(var i=0; i< data.length; i++){ %>
+            <a onclick='app.view.contentRender()' href=<%= "#"+linkroute+"/"+ i  +"/page1"%> >
+            <div class='box'>
+                <%=  data[i].Name %>
+            </div>
+            </a>
 
-          <ul>
-          <%  for(var i=0; i< data.length; i++){ %>
-          <li >
-            <a href=<%= "#"+linkroute+"/"+ i  +"/page1"%> > <%=  data[i].Name %></a>
-          </li>
-          <%  }%>
-          </ul>
+            <%  }%>
+
+
 
 
         </script>
@@ -51,6 +54,7 @@
         <script type="text/template" id="portfolio-content-template">
 
 
+          <div style='padding:10px'>
           <h2><%= data.Name+ " ("+data.Date+") " %></h2>
           <h3>Tech:</h3>
           <%  for(var i=0; i<  data.Tech.length; i++){ %>
@@ -69,10 +73,14 @@
 
           <h3>ScreenShots:</h3>
           <%  for(var i=0; i<  data.Examples.length; i++){ %>
-          <img src="http://placehold.it/100x100"/>
+
+           <img onClick="" src="http://placehold.it/100x100" title="The Link" />
           <%  }%>
 
               </div>
+
+
+           <div>
 
         </script>
 
@@ -104,44 +112,113 @@
 
         </script>
 
-       <div class="header">
 
-           <div id='nav-target'>
+        <script type="text/template" id="footer-template">
 
-               <div class='container center'>
+            <div class='container center'>
+            <%  for(var i=0; i<  data.length; i++){ %>
+          <div class='icon'>
+          <img src="img/33/<%=data[i].Name+'.jpg' %>"</img>
+          </div>
+            <%  }%>
 
-                   <div class='right'>
-                   <h1 class='title'>Steven J. Tomblin</h1>
-                   <h2 class='title'>Designer / Developer / Artist</h2>
+                </div>
+
+
+
+
+
+        </script>
+
+        <div class="header2">
+
+            <div id='nav-target'>
+
+                <div class='container center'>
+                    <div class='right'>
+                        <h1 class='title'>Steven J. Tomblin</h1>
+                        <h2 class='title'>Designer / Developer / Artist</h2>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div id="back"></div>
+        <div class="menu">
+            <div class='container center'>
+                <nav>
+                    <ul>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#process">Process</a></li>
+                    </ul>
+                </nav>
+        </div></div>
+
+
+       <div class='container center'>
+<!--
+       <div id='list-target' class="verticalLine"></div>
+-->
+
+       <div id='list-target'></div>
+
+
+
+
+           <div class="md-modal " id="modal-1">
+               <div class="md-content">
+
+                   <div>
+                       <div id='content-target'></div>
+                       <button id="md-close">Close me!</button>
                    </div>
+
                </div>
+
 
            </div>
 
-        </div><!-- end nav -->
+           <div id="md-overlay"></div>
 
-       <div class='container center'>
+<script>
 
-           <nav>
+    /* Dynamic top menu positioning
+     *
+     */
 
-               <ul>
-                   <li><a href="#projects">Projects</a></li>
-                   <li><a href="#work">Work History</a></li>
-                   <li><a href="#education">Education</a></li>
-                   <li><a href="#process">Process</a></li>
-               </ul>
-           </nav>
-       <div id='list-target' class="verticalLine"></div>
+    var num = 70; //number of pixels before modifying styles
 
-       <div id='content-target'></div>
+    $(window).bind('scroll', function () {
+        if ($(window).scrollTop() > num) {
+            $('.menu').addClass('fixed');
 
+        } else {
+            $('.menu').removeClass('fixed');
+
+        }
+    });
+
+    //USE SCROLL WHEEL FOR THIS FIDDLE DEMO
+
+</script>
 
        </div><!-- end container -->
 
-       <footer id='footer-target'></footer>
+       <footer id='footer-target'>
+
+
+
+
+
+       </footer>
 
         <script src="js/vendor/underscore/underscore.js"></script>
         <script src="js/vendor/backbone/backbone1.1.js"></script>
+
         <script src="js/vendor/spin/spin.js"></script>
 
         <script src="js/vendor/backbone/models/model.js"></script>
