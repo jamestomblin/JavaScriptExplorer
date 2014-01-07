@@ -23,6 +23,9 @@
 
     </head>
     <body>
+
+
+
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -37,10 +40,22 @@
 
         <script type="text/template" id="list-template">
 
+
+            <div style="width:80%; margin:0 auto;">
+            <div id="bigtext">
+                <span ><%= linkroute %></span>
+                <span>PHP/HTML5/Flash/JavaScript/CSS</span>
+                <span>Photoshop/PhoneGap/Backbone/Adobe Air/Starling/Codeigniter/CreateJS</span>
+                <span>2000-2014</span>
+            </div>
+            </div>
+
+
             <%  for(var i=0; i< data.length; i++){ %>
             <a  href=<%= "#"+linkroute+"/"+ i  +"/page1"%> >
             <div class='box'>
-                <%=  data[i].Name %>
+                <p><%=  data[i].Name %><p>
+                <p><%=  data[i].SubName %></p>
             </div>
             </a>
 
@@ -74,7 +89,7 @@
           <h3>ScreenShots:</h3>
           <%  for(var i=0; i<  data.Examples.length; i++){ %>
 
-           <img onClick="" src="http://placehold.it/100x100" title="The Link" />
+           <img onClick="" src="http://placehold.it/100X100" title="The Link" />
           <%  }%>
 
               </div>
@@ -139,6 +154,8 @@
                         <h1 class='title'>Steven J. Tomblin</h1>
                         <h2 class='title'>Designer / Developer / Artist</h2>
                     </div>
+
+
                 </div>
 
             </div>
@@ -162,6 +179,9 @@
        <div class='container center'>
 
        <div id='list-target'></div>
+
+
+
 
            <div class="md-modal " id="modal-1">
                <div class="md-content">
@@ -206,6 +226,10 @@
 
         <script src="js/vendor/underscore/underscore.js"></script>
         <script src="js/vendor/backbone/backbone1.1.js"></script>
+        <script src="js/vendor/fittext/fittext.js"></script>
+        <script src="js/vendor/bigtext/bigtext.js"></script>
+
+
 
         <script src="js/vendor/spin/spin.js"></script>
 

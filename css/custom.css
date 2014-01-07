@@ -44,9 +44,9 @@ img{
 
 
 
-a:link {color:#282828;}      /* unvisited link */
-a:visited {color:#245269;}  /* visited link */
-a:hover {color:#222222;}  /* mouse over link */
+a:link {color:#999;}      /* unvisited link */
+a:visited {color:#999;}  /* visited link */
+a:hover {color:#666;}  /* mouse over link */
 a:active {color:#000000;}  /* selected link */
 
 .title{
@@ -116,7 +116,7 @@ ul
     color: White;
     text-decoration: none;
     float: left;
-    border-right: 1px solid #fff;
+    border-right: 1px solid #222222;
 }
 
 #navcontainer ul li a:hover
@@ -156,7 +156,7 @@ img{
 
     margin: 5px;
     float:left;
-    padding-top:70px;
+    padding-top:10px;
     padding-bottom: 112px;
     width:100%;
 
@@ -239,11 +239,12 @@ img{
 
 .box{
     float: left;
-
-    width:30%;
+    font-size: 2rem;
+    width:20%;
     height:250px;
     background-color: #222222;
     margin:10px;
+    padding: 10px;
 
 
 }
@@ -265,7 +266,7 @@ img{
     max-width: 730px;
     min-width: 320px;
     height: 500px;
-    width:500px;
+    width:650px;
     z-index: 2000;
     visibility: hidden;
     -webkit-backface-visibility: hidden;

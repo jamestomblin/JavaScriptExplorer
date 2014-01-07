@@ -166,8 +166,18 @@ app.MyView = Backbone.View.extend({
         $('#modal-1').css('visibility','hidden');
         $('#md-overlay').css('visibility','hidden');
 
+
+
+
         this.list_el.html( this.list_template({data:this.model.attributes[this.options.linkroute], linkroute:this.options.linkroute}) );
         this.content_el.html('');
+
+        $('#bigtext').bigtext().addClass('animated fadeIn');
+
+        $('.box').each(function() {
+            console.log(this)
+                $(this).bigtext() ;
+        });
 
     },
 
@@ -190,7 +200,10 @@ var string = "At vero eos et accusamus et iusto odio dignissimos ducimus qui bla
                 console.log('render project');
                 this.showModal();
 
+
+
                 this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
+
                 break;
             case 'education':
                 this.showModal();
