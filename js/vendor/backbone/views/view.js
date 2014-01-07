@@ -48,9 +48,9 @@ function Usability(){
 
 };
 
-app.usability =  new Usability();
+//app.usability =  new Usability();
 
-console.log(app.usability);
+//console.log(app.usability);
 
 
 app.NavView = Backbone.View.extend({
@@ -71,9 +71,9 @@ app.NavView = Backbone.View.extend({
 
     footer:[
     {"Name":"javascript",  "Frameworks":["BackBone.js", "AngularJS"] },
-        {"Name":"HTML5", "About":"PhoneGap" },
-        {"Name":"flash", "About":"OSMF" },
-        {"Name":"css", "About":"" },
+    {"Name":"HTML5", "About":"PhoneGap" },
+    {"Name":"flash", "About":"OSMF" },
+    {"Name":"css", "About":"" },
     {"Name":"photoshop", "About":"" },
     {"Name":"maya", "About":"" },
     {"Name":"backbone", "About":"" },
@@ -172,12 +172,41 @@ app.MyView = Backbone.View.extend({
         this.list_el.html( this.list_template({data:this.model.attributes[this.options.linkroute], linkroute:this.options.linkroute}) );
         this.content_el.html('');
 
-        $('#bigtext').bigtext().addClass('animated fadeIn');
 
-        $('.box').each(function() {
-            console.log(this)
-                $(this).bigtext() ;
-        });
+        $('#bigtext').bigtext().addClass('animated fadeIn');
+        for(var i = 0; i < this.model.attributes[this.options.linkroute].length; i++){
+
+
+            $("#fitbox"+i).fitText();
+
+        }
+      //  setTimeout(function(){
+       // $("#fittext1").fitText();
+        //    $("#0box").fitText();
+        //    $("#1box").fitText();
+
+
+       // }, 0);
+
+       // $('#bigtext').bigtext().addClass('animated fadeIn');
+       // $("#0box").fitText()
+      //  $('#1box').fitText();
+
+        //$('#1box').bigtext();
+       // $('#2box').bigtext();
+
+
+       //$( "div[id$='box']" ).each(function() {
+
+       //    console.log(this)
+       //    $(this).bigtext() ;
+
+       //});
+
+        //$('.box').each(function() {
+         //   console.log(this)
+               // $(this)[0].bigtext() ;
+        //});
 
     },
 
@@ -190,7 +219,7 @@ var string = "At vero eos et accusamus et iusto odio dignissimos ducimus qui bla
 
         $('#modal-1').css('visibility','hidden');
         console.log('render content render');
-       var usablity = true;
+     //  var usablity = true;
      //   console.log(this.model.attributes[this.options.linkroute][this.options.loc].About);
        this.model.attributes[this.options.linkroute][this.options.loc].About = string//string + string;
 

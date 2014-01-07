@@ -51,15 +51,19 @@
             </div>
 
 
-            <%  for(var i=0; i< data.length; i++){ %>
+            <%  for(var i=0; i< data.length; i++){   var id='fitbox'+i %>
             <a  href=<%= "#"+linkroute+"/"+ i  +"/page1"%> >
-            <div class='box'>
-                <p><%=  data[i].Name %><p>
-                <p><%=  data[i].SubName %></p>
+            <div class='container-box'>
+
+              <h4 id=<%= id %>><%= data[i].Name %></h4>
+
             </div>
             </a>
 
             <%  }%>
+
+
+
 
 
 
@@ -80,8 +84,8 @@
 
           <h3>About:</h3>
            <section>
-              <% var temp =  app.usability.readability( data.About)%>
-            <%= temp %>
+              <% //var temp =  app.usability.readability( data.About)%>
+            <%= data.About %>
           </section>
 
            <div class='center'>

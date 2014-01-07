@@ -14,7 +14,7 @@ var app = app || {};
 app.AppRouter = Backbone.Router.extend({
 
     routes:{
-        "":'home',
+        "":'projects',
         'projects(/:loc)(/page:page)': 'projects',
         'education(/:loc)(/page:page)': 'education',
         'process(/:loc)(/page:page)': 'process',
