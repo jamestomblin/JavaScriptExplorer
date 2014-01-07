@@ -34,7 +34,7 @@ function Usability(){
         for(var i = 0; i < arr.length; i++){
 
             finalString += arr[i] + "<span id='readability'>X</span>";
-            console.log( finalString );
+            //console.log( finalString );
 
         }
 
@@ -110,12 +110,8 @@ app.MyView = Backbone.View.extend({
     initialize: function(options){
 
         $('#md-close').click(function() {
-
             this.hideModal()
-
         }.bind(this));
-
-
         $('#md-overlay').click(function() {
             this.hideModal()
         }.bind(this));
@@ -123,27 +119,27 @@ app.MyView = Backbone.View.extend({
         this.options = options || {};
         this.listenTo(this.model,'change', this.listrender);
         this.on('setContent', this.contentRender);
-
+    console.log(this.model.attributes.complete);
         if(this.model.attributes.complete == false){
-        this.model.fetch({
+
+            this.model.fetch({
             url: "db/db.json",
             success: function(e) {
-
+                console.log('model loaaaaaded');
                 this.model.attributes.complete = true;
-                console.log(this.model);
-                //console.log(this.options);
+
                 if(this.options.loc != undefined ){
 
-
-
                     this.trigger('setContent', this.options );
+
                 }
 
-            }.bind(this),
-            error: function(e){
+                }.bind(this),
+                error: function(e){
                 console.log('There was some error in loading and processing the JSON file');
-            }
-        });
+                }
+            });
+
         }
         else{
 
@@ -151,7 +147,7 @@ app.MyView = Backbone.View.extend({
             this.listrender();
 
             if(this.options.loc != undefined ){
-            //    console.log('setContent');
+                console.log('setContent');
                 this.trigger('setContent', this.options );
             }
         }
@@ -183,14 +179,15 @@ var string = "At vero eos et accusamus et iusto odio dignissimos ducimus qui bla
 ///*
 
         $('#modal-1').css('visibility','hidden');
-
+        console.log('render content render');
        var usablity = true;
-       this.model.attributes[this.options.linkroute][this.options.loc].About = string + string;
+     //   console.log(this.model.attributes[this.options.linkroute][this.options.loc].About);
+       this.model.attributes[this.options.linkroute][this.options.loc].About = string//string + string;
 
         switch(this.options.linkroute)
         {
             case 'projects':
-                console.log('render content');
+                console.log('render project');
                 this.showModal();
 
                 this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
@@ -221,8 +218,9 @@ var string = "At vero eos et accusamus et iusto odio dignissimos ducimus qui bla
 
         $('#modal-1').css('visibility','visible');
         $('#modal-1').addClass('animated fadeIn');
-
         $('#md-overlay').css('visibility','visible');
+
+       //
 
 
     },
@@ -231,7 +229,7 @@ var string = "At vero eos et accusamus et iusto odio dignissimos ducimus qui bla
         $('#modal-1').removeClass('animated fadeIn');
         $('#modal-1').css('visibility','hidden');
         $('#md-overlay').css('visibility','hidden');
-
+        app_router.navigate(this.options.linkroute);
 
     }
 
