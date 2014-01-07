@@ -307,7 +307,7 @@ h4 {
 }
 
 .container-box {
-    width: 28%;
-
+    width: 100%;
+    margin:0 auto;
     max-width:1140px;
 }
