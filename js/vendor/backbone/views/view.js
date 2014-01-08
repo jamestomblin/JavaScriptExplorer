@@ -174,17 +174,16 @@ app.MyView = Backbone.View.extend({
 
 
         $('#bigtext').bigtext().addClass('animated fadeIn');
-        /*
+
         for(var i = 0; i < this.model.attributes[this.options.linkroute].length; i++){
 
 
-            $("#fitbox"+i).fitText();
+            $("#fittext"+i).fitText();
 
         }
-*/
-        $("#fittext1").fitText();
-        $("#fittext2").fitText(1.2);
-        $("#fittext3").fitText(1.1, { minFontSize: '50px', maxFontSize: '75px' });
+
+
+        //$("#fittext3").fitText(1.1, { minFontSize: '50px', maxFontSize: '75px' });
 
       //  setTimeout(function(){
        // $("#fittext1").fitText();

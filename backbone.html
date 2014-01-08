@@ -42,38 +42,30 @@
         <script type="text/template" id="list-template">
 
 
-          <div class="container-box">
 
-            <h1 id="fittext1">Squeeze with FitText in this box, this a really long line dfdsfdsfsdfasfds dfsdfdsf</h1>
-            <h1 id="fittext2">Squeeze with FitText</h1>
-            <h1 id="fittext3">Squeeze with FitText</h1>
+          <div class="container">
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+              <div style="width:80%; margin:0 auto;">
+                  <div id="bigtext">
+
+                      <span ><%= linkroute %></span>
+                      <span >PHP/HTML5/Flash/JavaScript/CSS</span>
+                      <span >Photoshop/PhoneGap/Backbone/Adobe Air/Starling/Codeigniter/CreateJS</span>
+
+                  </div>
+              </div>
+
+
           </div>
 
-
-
-
-        </script>
-
-        <script type="text/template" id="list-template2">
-
-
-            <div style="width:80%; margin:0 auto;">
-            <div id="bigtext">
-                <span ><%= linkroute %></span>
-                <span>PHP/HTML5/Flash/JavaScript/CSS</span>
-                <span>Photoshop/PhoneGap/Backbone/Adobe Air/Starling/Codeigniter/CreateJS</span>
-                <span>2000-2014</span>
-            </div>
-            </div>
-
-
-            <%  for(var i=0; i< data.length; i++){   var id='fitbox'+i %>
+            <%  for(var i=0; i< data.length; i++){   var id='fittext'+i %>
             <a  href=<%= "#"+linkroute+"/"+ i  +"/page1"%> >
-            <div class='container-box'>
+            <div class='box'>
 
-              <h4 id=<%= id %>><%= data[i].Name %></h4>
+                <h4 class='boxTitle' id=<%= id %>><%= data[i].Name %></h4>
+                <img style="float:left;"  src="porfolio-images/thumbs/sumit.png">
+                <p class='boxSection'><%= data[i].About %></p>
 
             </div>
             </a>
@@ -84,9 +76,8 @@
 
 
 
-
-
         </script>
+
 
         <script type="text/template" id="portfolio-content-template">
 
