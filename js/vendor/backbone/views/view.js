@@ -196,19 +196,7 @@ app.MyView = Backbone.View.extend({
             $("#fittext"+i).fitText();
         }
 
-        /*
-        $('#modal-1').css('visibility','hidden');
-        $('#md-overlay').css('visibility','hidden');
 
-        this.list_el.html( this.list_template({data:this.model.attributes[this.options.linkroute], linkroute:this.options.linkroute}) );
-        this.content_el.html('');
-
-        //$('#bigtext').addClass('animated fadeIn');
-
-        for(var i = 0; i < this.model.attributes[this.options.linkroute].length; i++){
-            $("#fittext"+i).fitText();
-        }
-*/
 
     },
 
@@ -216,12 +204,6 @@ app.MyView = Backbone.View.extend({
 
 var string = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repella";
 
-    //   alert('cool');
-///*
-
-       //$('#modal-1').css('visibility','hidden');
-
-       //this.model.attributes[this.options.linkroute][this.options.loc].About = string//string + string;
 
         switch(this.options.linkroute)
         {
