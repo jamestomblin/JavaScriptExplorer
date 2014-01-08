@@ -1,21 +1,29 @@
 {
 "projects": [
-{ "Name":"Mobile Apps", "SubName":"Mobile Application", "Date":"2013" ,"Tech":["PhoneGap","JavaScript", "HTML", "CreateJS" ],
+{ "Name":"Mobile Apps", "SubName":"Sounds of Speech", "Date":"2013" ,"Tech":["PhoneGap","JavaScript", "HTML", "CreateJS" ],
     "About":"","Examples":["image1.jpg","image2.jpg","image2.jpg","image2.jpg"]},
-{ "Name":"Games" ,"SubName": "Mobile Game" , "Date":"2013" ,"Tech":["Adobe Air","Starling", "FeatherUI" ],
+
+{ "Name":"Games" ,"SubName": "Tower Defense" , "Date":"2013" ,"Tech":["Adobe Air","Starling", "FeatherUI" ],
     "About":"Project Info","Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-{ "Name":"Interactive Video" , "SubName": "Mobile Game" ,"Date":"2013" , "Tech":["PHP","JavaScript", "HTML", "Flash" ],
+
+{ "Name":"Interactive Video" , "SubName": [{"Name":"SUMIT", "About":"About"}] ,"Date":"2013" , "Tech":["PHP","JavaScript", "HTML", "Flash" ],
     "About":"","Examples":["image1.jpg","image1.jpg","image1.jpg"] },
+
 { "Name":"Digital Signage" , "Date":"2013" ,"Tech":["JavaScript","Flash"] ,
     "About":"", "Examples":["image1.jpg"]},
+
 { "Name":"Websites" ,  "SubName": "Mobile Game" ,"Date":"2012" , "Tech":["JavaScript","PHP","Filemaker"] ,
     "About":"", "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+
 { "Name":"Rich Media Applications" ,  "SubName": "Mobile Game" ,"Date":"2010" ,"Tech":["JavaScript","Flash"] ,
     "About":"", "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+
 { "Name":"Online Learning" ,"SubName": "Mobile Game" , "Date":"2009" ,"Tech":["JavaScript","Flash", "Captivate"] ,
     "About":"", "Examples":["image1.jpg"]},
+
 { "Name":"Virtual Reality" ,"SubName": "Mobile Game" , "Date":"2007" ,"Tech":[] ,
     "About":"", "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+
 { "Name":"Computer Graphics" ,"SubName": "Mobile Game" , "Date":"2001" ,"Tech":["Maya","Flash", "Photoshop"] ,
     "About":"", "Examples":["image1.jpg"]}
 ],
