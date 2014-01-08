@@ -100,12 +100,16 @@ app.MyView = Backbone.View.extend({
     // Compile the template using underscore
     list_template : _.template( $("#list-template").html() ),
 
+
     content_el: $("#content-target"),
+
     // Compile the template using underscore
     portfolio_content_template : _.template( $("#portfolio-content-template").html() ),
     education_content_template : _.template( $("#education-content-template").html() ),
     process_content_template : _.template( $("#process-content-template").html() ),
     work_content_template : _.template( $("#work-content-template").html() ),
+
+    footer_template : _.template( $("#footer-template").html() ),
 
     initialize: function(options){
 
@@ -119,7 +123,7 @@ app.MyView = Backbone.View.extend({
         this.options = options || {};
         this.listenTo(this.model,'change', this.listrender);
         this.on('setContent', this.contentRender);
-    console.log(this.model.attributes.complete);
+        console.log(this.model.attributes.complete);
         if(this.model.attributes.complete == false){
 
             this.model.fetch({
@@ -152,6 +156,7 @@ app.MyView = Backbone.View.extend({
             }
         }
 
+
     },
 
     open : function () {
@@ -166,52 +171,15 @@ app.MyView = Backbone.View.extend({
         $('#modal-1').css('visibility','hidden');
         $('#md-overlay').css('visibility','hidden');
 
-
-
-
         this.list_el.html( this.list_template({data:this.model.attributes[this.options.linkroute], linkroute:this.options.linkroute}) );
         this.content_el.html('');
 
-
-        $('#bigtext').bigtext().addClass('animated fadeIn');
+        //$('#bigtext').addClass('animated fadeIn');
 
         for(var i = 0; i < this.model.attributes[this.options.linkroute].length; i++){
-
-
             $("#fittext"+i).fitText();
-
         }
 
-
-        //$("#fittext3").fitText(1.1, { minFontSize: '50px', maxFontSize: '75px' });
-
-      //  setTimeout(function(){
-       // $("#fittext1").fitText();
-        //    $("#0box").fitText();
-        //    $("#1box").fitText();
-
-
-       // }, 0);
-
-       // $('#bigtext').bigtext().addClass('animated fadeIn');
-       // $("#0box").fitText()
-      //  $('#1box').fitText();
-
-        //$('#1box').bigtext();
-       // $('#2box').bigtext();
-
-
-       //$( "div[id$='box']" ).each(function() {
-
-       //    console.log(this)
-       //    $(this).bigtext() ;
-
-       //});
-
-        //$('.box').each(function() {
-         //   console.log(this)
-               // $(this)[0].bigtext() ;
-        //});
 
     },
 
@@ -222,22 +190,16 @@ var string = "At vero eos et accusamus et iusto odio dignissimos ducimus qui bla
     //   alert('cool');
 ///*
 
-        $('#modal-1').css('visibility','hidden');
-        console.log('render content render');
-     //  var usablity = true;
-     //   console.log(this.model.attributes[this.options.linkroute][this.options.loc].About);
+       $('#modal-1').css('visibility','hidden');
+
        this.model.attributes[this.options.linkroute][this.options.loc].About = string//string + string;
 
         switch(this.options.linkroute)
         {
             case 'projects':
-                console.log('render project');
+
                 this.showModal();
-
-
-
-                this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
-
+                    this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
                 break;
             case 'education':
                 this.showModal();
@@ -281,6 +243,140 @@ var string = "At vero eos et accusamus et iusto odio dignissimos ducimus qui bla
     }
 
 
+
+
+
+
+
+});
+
+
+app.MyViewPhone = Backbone.View.extend({
+
+    list_el: $("#list-target"),
+    // Compile the template using underscore
+    content_el: $("#content-target1"),
+    list_template : _.template( $("#list-template").html() ),
+    portfolio_content_template : _.template( $("#portfolio-content-template").html() ),
+    education_content_template : _.template( $("#education-content-template").html() ),
+    process_content_template : _.template( $("#process-content-template").html() ),
+    work_content_template : _.template( $("#work-content-template").html() ),
+
+    initialize: function(options){
+
+        $('#footer-target').click(function() {
+            this.hideContent();
+        }.bind(this));
+
+        this.options = options || {};
+
+        console.log('phone');
+
+        //this.listrender();
+        //this.showContent();
+
+        this.listenTo(this.model,'change', this.listrender);
+        this.on('setContent', this.contentRender);
+
+        if(this.model.attributes.complete == false){
+
+            this.model.fetch({
+                url: "db/db.json",
+                success: function(e) {
+                    console.log('model loaaaaaded');
+                    this.model.attributes.complete = true;
+
+                    if(this.options.loc != undefined ){
+
+                        this.trigger('setContent', this.options );
+
+                    }
+
+                }.bind(this),
+                error: function(e){
+                    console.log('There was some error in loading and processing the JSON file');
+                }
+            });
+
+        }
+        else{
+
+            console.log('model already loaded');
+            this.listrender();
+
+            if(this.options.loc != undefined ){
+                console.log('setContent');
+                this.trigger('setContent', this.options );
+            }
+        }
+
+
+
+    },
+
+    contentRender:function(){
+
+        this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
+        this.showContent();
+
+
+
+    },
+
+    listrender:function(){
+
+
+
+        console.log(this.options);
+
+        this.list_el.html( this.list_template({data:this.model.attributes[this.options.linkroute], linkroute:this.options.linkroute}) );
+      //  this.content_el.html('');
+
+     //   $('#bigtext').addClass('animated fadeIn');
+
+     //   for(var i = 0; i < this.model.attributes[this.options.linkroute].length; i++){
+     //       $("#fittext"+i).fitText();
+     //   }
+
+        for(var i = 0; i < this.model.attributes[this.options.linkroute].length; i++){
+            $("#fittext"+i).fitText();
+        }
+
+
+    },
+
+    render:function(){
+
+
+        this.list_el.html( '');
+        this.content_el.html('');
+
+    },
+
+
+    showContent:function(){
+        $('#list-target').addClass('animated slideOutLeft');
+        $('#content-target1').removeClass('animated slideOutRight');
+        $('#content-target1').css('visibility','visible');
+        $('#content-target1').addClass('animated slideInRight');
+        this.list_el.html( '');
+
+
+    },
+
+    hideContent:function(){
+
+        this.listrender();
+        $('#list-target').removeClass('animated slideOutLeft');
+        $('#list-target').addClass('animated slideInLeft');
+        $('#content-target1').removeClass('animated slideInRight');
+        $('#content-target1').addClass('animated slideOutRight');
+       //$('#content-target1').css('visibility','hidden');
+
+
+        app_router.navigate(this.options.linkroute);
+
+    }
 
 
 });

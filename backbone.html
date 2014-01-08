@@ -12,10 +12,10 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/animate-custom.css">
+        <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-      <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/main2.css">
+        <link rel="stylesheet" href="css/custom.css">
 
 
         <script src="js/vendor/modernizr/modernizr-2.6.2.min.js"></script>
@@ -38,6 +38,9 @@
 
         </script>
 
+        <script type="text/template" id="footer-template2">
+
+        </script>
 
         <script type="text/template" id="list-template">
 
@@ -49,9 +52,9 @@
               <div style="width:80%; margin:0 auto;">
                   <div id="bigtext">
 
-                      <span ><%= linkroute %></span>
-                      <span >PHP/HTML5/Flash/JavaScript/CSS</span>
-                      <span >Photoshop/PhoneGap/Backbone/Adobe Air/Starling/Codeigniter/CreateJS</span>
+                      <h1 id="type"><%= linkroute %></h1>
+                      <h2 id="subtype1">PHP/HTML5/Flash/JavaScript/CSS</h2>
+                      <h3 id="subtype2">Photoshop/PhoneGap/Backbone/Adobe Air/Starling/Codeigniter/CreateJS</h3>
 
                   </div>
               </div>
@@ -191,6 +194,7 @@
 
        <div class='container center'>
 
+       <div id='content-target1'></div>
        <div id='list-target'></div>
 
 
