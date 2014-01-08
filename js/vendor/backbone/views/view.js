@@ -100,6 +100,8 @@ app.MyView = Backbone.View.extend({
     // Compile the template using underscore
     list_template : _.template( $("#list-template").html() ),
 
+    list_template_other : _.template( $("#list-template-other").html() ),
+
 
     content_el: $("#content-target"),
 
@@ -168,6 +170,33 @@ app.MyView = Backbone.View.extend({
 
     listrender:function(){
 
+
+
+        switch(this.options.linkroute)
+        {
+            case 'projects':
+                this.list_el.html( this.list_template({data:this.model.attributes[this.options.linkroute], linkroute:this.options.linkroute}) );
+                break;
+            case 'education':
+                console.log('cool');
+                this.list_el.html( this.list_template_other({data:this.model.attributes[this.options.linkroute], linkroute:this.options.linkroute}) );
+             break;
+            case 'process':
+                this.list_el.html( this.list_template_other({data:this.model.attributes[this.options.linkroute], linkroute:this.options.linkroute}) );
+             break;
+            case 'work':
+                this.list_el.html( this.list_template_other({data:this.model.attributes[this.options.linkroute], linkroute:this.options.linkroute}) );
+          break;
+            default:
+
+
+        }
+
+        for(var i = 0; i < this.model.attributes[this.options.linkroute].length; i++){
+            $("#fittext"+i).fitText();
+        }
+
+        /*
         $('#modal-1').css('visibility','hidden');
         $('#md-overlay').css('visibility','hidden');
 
@@ -179,7 +208,7 @@ app.MyView = Backbone.View.extend({
         for(var i = 0; i < this.model.attributes[this.options.linkroute].length; i++){
             $("#fittext"+i).fitText();
         }
-
+*/
 
     },
 
@@ -190,28 +219,30 @@ var string = "At vero eos et accusamus et iusto odio dignissimos ducimus qui bla
     //   alert('cool');
 ///*
 
-       $('#modal-1').css('visibility','hidden');
+       //$('#modal-1').css('visibility','hidden');
 
-       this.model.attributes[this.options.linkroute][this.options.loc].About = string//string + string;
+       //this.model.attributes[this.options.linkroute][this.options.loc].About = string//string + string;
 
         switch(this.options.linkroute)
         {
             case 'projects':
-
+                console.log(this.options.item);
+                //console.log(this.model.attributes[this.options.linkroute][this.options.loc].SubName[this.options.item]);
                 this.showModal();
-                    this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
+                this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc].SubName[this.options.item]}) );
+
                 break;
             case 'education':
-                this.showModal();
-                this.content_el.html( this.education_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
+               // this.showModal();
+               // this.content_el.html( this.education_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc].SubName[this.options.item]}) );
                 break;
             case 'process':
-                this.showModal();
-                this.content_el.html( this.process_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
+               // this.showModal();
+               // this.content_el.html( this.process_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc].SubName[this.options.item]}) );
                 break;
             case 'work':
-                this.showModal();
-                this.content_el.html( this.work_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
+              //  this.showModal();
+               // this.content_el.html( this.work_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc].SubName[this.options.item]}) );
                 break;
             default:
                 // default code
@@ -316,7 +347,9 @@ app.MyViewPhone = Backbone.View.extend({
 
     contentRender:function(){
 
-        this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
+       // this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc]}) );
+        this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc].SubName[this.options.item]}) );
+
         this.showContent();
 
 
@@ -332,7 +365,7 @@ app.MyViewPhone = Backbone.View.extend({
         this.list_el.html( this.list_template({data:this.model.attributes[this.options.linkroute], linkroute:this.options.linkroute}) );
       //  this.content_el.html('');
 
-     //   $('#bigtext').addClass('animated fadeIn');
+       // $('#bigtext').addClass('animated fadeIn');
 
      //   for(var i = 0; i < this.model.attributes[this.options.linkroute].length; i++){
      //       $("#fittext"+i).fitText();
@@ -355,11 +388,18 @@ app.MyViewPhone = Backbone.View.extend({
 
 
     showContent:function(){
-        $('#list-target').addClass('animated slideOutLeft');
+       // $('#list-target').removeClass('animated slideOutLeft');
+      //  $('#list-target').addClass('animated slideInLeft');
+
         $('#content-target1').removeClass('animated slideOutRight');
         $('#content-target1').css('visibility','visible');
         $('#content-target1').addClass('animated slideInRight');
-        this.list_el.html( '');
+        setTimeout(function(){
+
+            this.list_el.html( '');
+
+        }.bind(this), 1000);
+
 
 
     },
@@ -367,8 +407,8 @@ app.MyViewPhone = Backbone.View.extend({
     hideContent:function(){
 
         this.listrender();
-        $('#list-target').removeClass('animated slideOutLeft');
-        $('#list-target').addClass('animated slideInLeft');
+       // $('#list-target').removeClass('animated slideOutLeft');
+       // $('#list-target').addClass('animated slideInLeft');
         $('#content-target1').removeClass('animated slideInRight');
         $('#content-target1').addClass('animated slideOutRight');
        //$('#content-target1').css('visibility','hidden');

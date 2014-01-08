@@ -63,26 +63,71 @@
           </div>
 
             <%  for(var i=0; i< data.length; i++){   var id='fittext'+i %>
-            <a  href=<%= "#"+linkroute+"/"+ i  +"/page1"%> >
+
             <div class='box'>
 
                 <h4 class='boxTitle' id=<%= id %>><%= data[i].Name %></h4>
-                <img style="float:left;"  src="porfolio-images/thumbs/sumit.png">
-                <p class='boxSection'><%= data[i].About %></p>
+
+
+
+              <%  for(var j=0; j< data[i].SubName.length; j++){   %>
+              <a  href=<%= "#"+linkroute+"/"+ i  +"/item" +j%> >
+                <p><%=data[i].SubName[j].Name%></p>
+              </a>
+
+              <%  }%>
+
 
             </div>
-            </a>
+
 
             <%  }%>
-
-
-
-
 
         </script>
 
 
+        <script type="text/template" id="list-template-other">
+
+          <div class="container">
+
+
+            <div style="width:80%; margin:0 auto;">
+              <div id="bigtext">
+
+                <h1 id="type"><%= linkroute %></h1>
+                <h2 id="subtype1">PHP/HTML5/Flash/JavaScript/CSS</h2>
+                <h3 id="subtype2">Photoshop/PhoneGap/Backbone/Adobe Air/Starling/Codeigniter/CreateJS</h3>
+
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <%  for(var i=0; i< data.length; i++){   var id='fittext'+i %>
+
+          <div class='box'>
+
+            <h4 class='boxTitle' id=<%= id %>><%= data[i].Name %></h4>
+
+
+
+
+          </div>
+
+
+          <%  }%>
+
+
+        </script>
+
         <script type="text/template" id="portfolio-content-template">
+          <h2><%= data.Name %></h2>
+
+        </script>
+
+        <script type="text/template" id="portfolio-content-template2">
 
 
           <div style='padding:10px'>

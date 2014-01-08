@@ -16,10 +16,10 @@ app.AppRouter = Backbone.Router.extend({
 
     routes:{
         "":'projects',
-        'projects(/:loc)(/page:page)': 'projects',
-        'education(/:loc)(/page:page)': 'education',
-        'process(/:loc)(/page:page)': 'process',
-        'work(/:loc)(/page:page)': 'work'
+        'projects(/:loc)(/item:item)': 'projects',
+        'education(/:loc)(/item:item)': 'education',
+        'process(/:loc)(/item:item)': 'process',
+        'work(/:loc)(/item:item)': 'work'
     },
 
     initialize:function(){
@@ -30,44 +30,44 @@ app.AppRouter = Backbone.Router.extend({
 
     },
 
-    process:function(loc, p){
+    process:function(loc, item){
 
 
         app.route = 'process';
-        app.view=  new app.MyView( {model:app.model ,loc:loc, page:p, linkroute:'process' });
+        app.view=  new app.MyView( {model:app.model ,loc:loc, item:item, linkroute:'process' });
 
 
     },
 
-    education:function(loc, p){
+    education:function(loc, item){
 
         app.route = 'education';
-        app.view = new app.MyView({ model:app.model ,loc:loc, page:p , linkroute:'education'});
+        app.view = new app.MyView({ model:app.model ,loc:loc, item:item , linkroute:'education'});
 
     },
 
 
 
-    projects:function(loc, p){
+    projects:function(loc, item){
 
        // console.log('route for phone'+app.phone );
-       new app.NavView();
+console.log(item)
        // app.route = 'projects';
         console.log('is it a phone? '+ app.phone);
         if( app.phone == false){
-            app.view = new app.MyView({ model:app.model ,loc:loc, page:p , linkroute:'projects'})
+            app.view = new app.MyView({ model:app.model ,loc:loc, item:item , linkroute:'projects'})
         }else{
-            app.view=  new app.MyViewPhone({ model:app.model ,loc:loc, page:p , linkroute:'projects'})
+            app.view=  new app.MyViewPhone({ model:app.model ,loc:loc, item:item , linkroute:'projects'})
 //
         }
-
+        new app.NavView();
 
     },
 
-    work:function(loc, p){
+    work:function(loc, item){
 
         app.route = 'work';
-        app.view = new app.MyView({ model:app.model ,loc:loc, page:p , linkroute:'work'})
+        app.view = new app.MyView({ model:app.model ,loc:loc, item:item , linkroute:'work'})
 
 
     }
