@@ -116,7 +116,7 @@ ul
     color: White;
     text-decoration: none;
     float: left;
-    border-right: 1px solid #222222;
+    border-right: 1px solid #fff;
 }
 
 #navcontainer ul li a:hover
@@ -226,6 +226,7 @@ img{
     background:#d58512;
     color:#FFF;
     height:35px;
+    background-image: url('../img/tile.png');
 
     position:absolute;
     top:150px;
@@ -235,6 +236,7 @@ img{
     background:#d58512;
     position:fixed;
     top:80px;
+    background-image: url('../img/tile.png');
 }
 
 .box{
