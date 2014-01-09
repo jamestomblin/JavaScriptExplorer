@@ -1,56 +1,77 @@
 {
 "projects": [
-{ "Name":"Mobile ", "SubName": [
-    {"Name":"Sounds Of Speech", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Tower Defense", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
-],
-    "Date":"2013" ,"Tech":["PhoneGap","JavaScript", "HTML", "CreateJS" ],
-    "About":"","Examples":"image1.jpg"},
 
-{ "Name":"Interactive Video" , "SubName": [
-    {"Name":"SUMIT", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Hearing Research", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Admissions Video", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"IGEC", "About":"About","Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Madurese Stories", "About":"About","Examples":["image1.jpg","image1.jpg","image1.jpg"]}]
+    { "Name":"Mobile ", "SubName": [
+        {"Name":"Sounds Of Speech", "Date":"2013-14",
+            "About":"Sounds of Speech is an iOS and Android application built with HTML5 using PhoneGap to create a native application.  It uses animations, video and audio of the proper articulation to produce the sounds of English" ,
+            "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+        {"Name":"Tower Defense Game", "Date":"2014",
+            "About":"I am currently developing a tower defense game for iOS and Android built with Starling and FeathersUI. I'm using Adobe Air to package the game as a native application" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+    ],
+        "Date":"2013" ,"Tech":["PhoneGap","JavaScript", "HTML", "CreateJS" ],
+        "About":"","Examples":"image1.jpg"},
+
+
+{ "Name":"Interactive Media" , "SubName": [
+    {"Name":"Hearing Research", "Date":"2013",
+        "About":"This application displays hundreds of video and audio files to test hearing comprehension. I used BackboneJS to stucture the JavaScript logic and Bootstrap for the UI. " ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Radiology", "Date":"2007-13",
+        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions." ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Hancher DVD", "Date":"2006",
+        "About":"About","Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Dialects", "Date":"2006",
+        "About":"About","Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Madurese", "Date":"2009",
+        "About":"About","Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+
+]
     ,"Date":"2013" , "Tech":["PHP","JavaScript", "HTML", "Flash" ],
     "About":"","Examples":"portfolio-images/thumbs/icons/sumit.png" },
 
+
+    { "Name":"Video Players" , "SubName": [
+        {"Name":"UI-Media Players", "Date":"2009-14","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+        {"Name":"ICON Video Uploader", "Date":"2009-13","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+        {"Name":"IGEC", "Date":"2010","About":"About","Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+    ]
+        ,"Date":"2013" , "Tech":["PHP","JavaScript", "HTML", "Flash" ],
+        "About":"","Examples":"portfolio-images/thumbs/icons/sumit.png" },
+
+
 { "Name":"Digital Signage" ,"SubName": [
-    {"Name":"Bongo", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Ads", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+    {"Name":"Bongo", "Date":"2010-13","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Ads", "Date":"2010-13","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
 ],
     "Date":"2013" ,"Tech":["JavaScript","Flash"] ,
     "About":"", "Examples":["image1.jpg"]},
 
-{ "Name":"Websites/Elearning" ,  "SubName": [
-    {"Name":"Study Abroad Programs", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Public Safety Videos", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+{ "Name":"Websites" ,  "SubName": [
+    {"Name":"Study Abroad Programs", "Date":"2013","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Admissions Video", "Date":"2013","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Public Safety", "Date":"2013","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
 ]
-    ,"Date":"2012" , "Tech":["JavaScript","PHP","Filemaker"] ,
-    "About":"", "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+,"Date":"2012" , "Tech":["JavaScript","PHP","Filemaker"] ,
+"About":"", "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
 
-    { "Name":"Interactive Learning" ,  "SubName": [
-        {"Name":"Radiology", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-        {"Name":"Online@Iowa", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-        {"Name":"Krispy Kreme", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-        {"Name":"Eli Lilly", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-        {"Name":"Flight Safety Boeing", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
-    ]
-        ,"Date":"2012" , "Tech":["JavaScript","PHP","Filemaker"] ,
-        "About":"", "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+{ "Name":"e-Learning" ,  "SubName": [
 
+    {"Name":"Online@Iowa", "Date":"2009","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Eli Lilly", "Date":"2005","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+
+]
+,"Date":"2012" , "Tech":["JavaScript","PHP","Filemaker"] ,
+"About":"", "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
 
 
-
-
-    { "Name":"New Technologies" ,"SubName": [
-        {"Name":"Virtual Reality", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-        {"Name":"Augmented Reality", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
-    ],
-        "Date":"2001" ,"Tech":["Maya","Flash", "Photoshop"] ,
-
-        "About":"", "Examples":["image1.jpg"]}
+{ "Name":"Other Technologies" ,"SubName": [
+    {"Name":"Virtual Reality", "Date":"2006","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Augmented Reality", "Date":"2004","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"3D Printing Press", "Date":"2006","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"3D Demo Reel", "Date":"2002","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Computer Graphics", "Date":"2001","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+]
+    ,"Date":"2001" ,"Tech":["Maya","Flash", "Photoshop"] ,
+    "About":"", "Examples":["image1.jpg"]}
 ],
 "work": [
 {"Name":"University of Iowa", "Date":"2005-2013", "Title":"Application Developer" },
