@@ -3,10 +3,11 @@ html,body {
     padding:0;
     color:#0E3144;
     font-family: helvetica;
+
 }
 
 html {
-    background: url(../img/full.png) no-repeat center center fixed;
+    background: url(../img/full-back.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -14,12 +15,96 @@ html {
 
 }
 
+.right{
+    float:right;
+
+
+}
+
+.right-aside{
+
+    display:block;
+    background-color: #101010;
+    height: 50px;
+    width: 50px;
+
+}
+
+
+.right-title{
+    float:right;
+    width:80%;
+    padding-top:50px ;
+
+}
+
+.left{
+    float:left;
+    width:100%;
+    padding-top:50px ;
+
+}
+
+.left-ham{
+    float:left;
+    padding: 0;
+    margin: 0;
+    visibility: hidden;
+
+
+}
+
+
+aside {
+    font-size: 8rem;
+    position: relative;
+    z-index: -1;
+    opacity: .5;
+
+}
+
+aside h3 {
+    background: #369;
+    color: #444;
+    padding: 0px 10px;
+    margin: 40px 0 10px 0;
+}
+
+/* Class name via Modernizr */
+.csstransforms aside {
+    border-left: 34px solid #369;
+
+    /* Make a little room */
+    padding-left: 10px;
+}
+.csstransforms aside h3 {
+
+    /* Abs positioning makes it not take up vert space */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Border is the new background */
+    background: none;
+
+    /* Rotate from top left corner (not default) */
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin:    0 0;
+    -ms-transform-origin:     0 0;
+    -o-transform-origin:      0 0;
+
+    -webkit-transform: rotate(90deg);
+    -moz-transform:    rotate(90deg);
+    -ms-transform:     rotate(90deg);
+    -o-transform:      rotate(90deg);
+}
+
 
 .header {
     width: 100%;
     height: 150px;
     padding-top: 4rem;
-    background: #6d7488;
+
 }
 
 
@@ -76,11 +161,7 @@ a:active {color:#000000;}  /* selected link */
 
 }
 
-.right{
 
-    float: right;
-
-}
 
 ul  {
     padding-left:0;
@@ -102,12 +183,13 @@ ul
 
 #nav-target
 {
-    background-color:#0E3144;
+    background-color:#093844;
     width:100%;
     height:80px;
     box-shadow: 0px 1px 50px #5E5E5E;
     position:fixed;
     top:0px;
+    background-image: url('../img/tile.png');
 }
 
 
@@ -116,7 +198,6 @@ ul
     padding: 0px;
     margin: 0px;
     line-height: 35px;
-    color: White;
     float: left;
     width: 100%;
     height:100%;
@@ -129,8 +210,6 @@ ul
 #navcontainer ul li a
 {
     padding: 0.0em 1em;
-
-    color: White;
     text-decoration: none;
     float: left;
     border-right: 1px solid #fff;
@@ -139,18 +218,10 @@ ul
 #navcontainer ul li a:hover
 {
 
-    color: #fff;
-}
-
-
-
-
-img{
-
-    padding: 5px;
-    margin: 5px;
 
 }
+
+
 
 .center {
 
@@ -177,7 +248,7 @@ img{
 
 #content-target{
 
-
+background-color: #FFF2C1;
     float:left;
     width:100%;
     height:500px;
@@ -236,8 +307,8 @@ img{
 }
 
 .menu {
-    background:#617B88;
-    color:#FFF;
+    background:#80A894;
+    color:#FFF2C1;
     height:35px;
     background-image: url('../img/tile.png');
 
@@ -246,9 +317,10 @@ img{
     width:100%;
 }
 .fixed {
-    background:#617B88;
+    background:#80A894;
     position:fixed;
     top:80px;
+    color:#FFF2C1;
     background-image: url('../img/tile.png');
 }
 
@@ -257,6 +329,7 @@ img{
 .boxTitle{
     margin:0px;
     padding: 0px;
+    background-color: #093844
 
 
 
@@ -321,7 +394,7 @@ img{
 h4 {
     background: rgba(0,0,0,0.2);
     text-align: center;
-    color:#f9f9f9;
+    color:#d95514;
     font: 95px/1 "Impact";
     text-transform: uppercase;
     display: block;
@@ -350,7 +423,7 @@ h4 {
     float: left;
     width:270px;
     height: 250px;
-    background-color: #617B88;
+    background-color: #52736B;
     margin:10px;
     padding: 0px;
     background-image: url('../img/tile.png');
@@ -400,9 +473,11 @@ h4 {
 
 .item{
 
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 5px;
     margin-bottom: 1px;
+    color:#fff;
+    border-bottom: 1px solid;
 
 
 
@@ -495,12 +570,14 @@ h4 {
     {
         position:fixed;
         height:40px;
+        background-image: url('../img/tile.png');
 
     }
 
     .menu {
         position:fixed;
         top:40px;
+        background-image: url('../img/tile.png');
 
     }
 
@@ -510,6 +587,105 @@ h4 {
 
 
     }
+
+    .item{
+
+        font-size: 1.2rem;
+    }
+
+    .left{
+
+        width:100%;
+
+    }
+
+    #nav-target{
+
+        border-bottom: 1px solid #fff;
+
+    }
+
+#navcontainer {
+    visibility: hidden;
+    background-color: #093844;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    background-image: url('../img/tile.png');
+
+
+
+}
+
+    #navcontainer ul{
+
+        padding: 0px;
+        margin: 0px;
+        border-bottom: 1px solid #fff;
+        float: none;
+
+
+
+    }
+
+    #navcontainer li{
+
+        line-height: 35px;
+        border-right: none;
+        border-bottom: 1px solid #fff;
+        float: none;
+
+
+    }
+
+    #navcontainer ul li a
+    {
+        border-right: none;
+        float: none;
+        color:#fff;
+
+    }
+
+    .left-ham{
+        float:left;
+        padding: 0;
+        margin: 0;
+        visibility: visible;
+
+
+    }
+
+    #navcontainer ul li { display: block; }
+/*
+    #navcontainer ul
+    {
+        padding: 0px;
+        margin: 0px;
+        line-height: 35px;
+        float: left;
+        width: 100%;
+        height:100%;
+        font-family: arial, helvetica, sans-serif;
+
+    }
+
+
+
+    #navcontainer ul li a
+    {
+        padding: 0.0em 1em;
+        text-decoration: none;
+        float: none;
+        border-right: 1px solid #fff;
+    }
+
+    #navcontainer ul li a:hover
+    {
+
+
+    }
+    */
+
+
 
 /*
     .box{

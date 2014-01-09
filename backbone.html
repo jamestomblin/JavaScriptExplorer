@@ -44,32 +44,18 @@
 
         <script type="text/template" id="list-template">
 
+            <aside>
 
+                <h3 ><%= linkroute %></h3>
+            </aside>
 
-          <div class="container">
-
-
-              <div style="width:80%; margin:0 auto;">
-                  <div id="bigtext">
-
-                      <h1 id="type"><%= linkroute %></h1>
-                      <h2 id="subtype1">PHP/HTML5/Flash/JavaScript/CSS</h2>
-                      <h3 id="subtype2">Photoshop/PhoneGap/Backbone/Adobe Air/Starling/Codeigniter/CreateJS</h3>
-
-                  </div>
-              </div>
-
-
-          </div>
+<div class='left'>
 
             <%  for(var i=0; i< data.length; i++){   var id='fittext'+i %>
 
-            <div class='box'>
+             <div class='box'>
 
-
-                <h4 class='boxTitle' id=<%= id %>><%= data[i].Name%></h4>
-
-
+             <h4 class='boxTitle' id=<%= id %>><%= data[i].Name%></h4>
 
               <%  for(var j=0; j< data[i].SubName.length; j++){   %>
               <a  href=<%= "#"+linkroute+"/"+ i  +"/item" +j%> >
@@ -78,33 +64,19 @@
 
               <%  }%>
 
+            </div>
+
+            <%  }%>
 
             </div>
 
-
-            <%  }%>
 
         </script>
 
 
         <script type="text/template" id="list-template-other">
 
-          <div class="container">
-
-
-            <div style="width:80%; margin:0 auto;">
-              <div id="bigtext">
-
-                <h1 id="type"><%= linkroute %></h1>
-                <h2 id="subtype1">PHP/HTML5/Flash/JavaScript/CSS</h2>
-                <h3 id="subtype2">Photoshop/PhoneGap/Backbone/Adobe Air/Starling/Codeigniter/CreateJS</h3>
-
-              </div>
-            </div>
-
-
-          </div>
-
+            <div class='left'>
 
           <%  for(var i=0; i< data.length; i++){   var id='fittext'+i %>
 
@@ -112,13 +84,17 @@
 
             <h4 class='boxTitle' id=<%= id %>><%= data[i].Name %></h4>
 
-
-
-
           </div>
 
 
           <%  }%>
+
+            </div>
+
+            <aside>
+
+                <h3 ><%= linkroute %></h3>
+            </aside>
 
 
         </script>
@@ -220,7 +196,12 @@
 
             <div id='nav-target'>
 
-                <div class='container center'>
+                <div class='container'>
+
+                    <div class='left-ham' id='hamburger'>
+                        <img src="img/ham.png">
+                    </div>
+
                     <div class='right'>
                         <h1 class='title'>Steven J. Tomblin</h1>
                         <h2 class='title'>Designer / Developer / Artist</h2>
@@ -250,9 +231,8 @@
        <div class='container center'>
 
        <div id='content-target1'></div>
+
        <div id='list-target'></div>
-
-
 
 
            <div class="md-modal " id="modal-1">

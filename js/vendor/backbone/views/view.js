@@ -115,6 +115,8 @@ app.MyView = Backbone.View.extend({
 
     initialize: function(options){
 
+        $('#navcontainer').css('visibility', 'visible');
+
         $('#md-close').click(function() {
             this.hideModal()
         }.bind(this));
@@ -283,6 +285,18 @@ app.MyViewPhone = Backbone.View.extend({
 
         $('#footer-target').click(function() {
             this.hideContent();
+        }.bind(this));
+        this.hamburger = false;
+        $('#navcontainer').css('visibility', 'hidden');
+        $('#hamburger').click(function() {
+            if(this.hamburger == false){
+                $('#navcontainer').css('visibility', 'visible');
+                this.hamburger = true;
+            }else{
+
+                $('#navcontainer').css('visibility', 'hidden');
+                this.hamburger = false;
+            }
         }.bind(this));
 
         this.options = options || {};
