@@ -1,31 +1,56 @@
 {
 "projects": [
-{ "Name":"Mobile Apps", "SubName": [{"Name":"Sounds Of Speech", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}], "Date":"2013" ,"Tech":["PhoneGap","JavaScript", "HTML", "CreateJS" ],
-    "About":"","Examples":["image1.jpg","image2.jpg","image2.jpg","image2.jpg"]},
+{ "Name":"Mobile ", "SubName": [
+    {"Name":"Sounds Of Speech", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Tower Defense", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+],
+    "Date":"2013" ,"Tech":["PhoneGap","JavaScript", "HTML", "CreateJS" ],
+    "About":"","Examples":"image1.jpg"},
 
-{ "Name":"Games" ,"SubName": [{"Name":"Tower Defense", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}] , "Date":"2013" ,"Tech":["Adobe Air","Starling", "FeatherUI" ],
-    "About":"Project Info","Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+{ "Name":"Interactive Video" , "SubName": [
+    {"Name":"SUMIT", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Hearing Research", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Admissions Video", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"IGEC", "About":"About","Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Madurese Stories", "About":"About","Examples":["image1.jpg","image1.jpg","image1.jpg"]}]
+    ,"Date":"2013" , "Tech":["PHP","JavaScript", "HTML", "Flash" ],
+    "About":"","Examples":"portfolio-images/thumbs/icons/sumit.png" },
 
-{ "Name":"Interactive Video" , "SubName": [{"Name":"Admissions Video", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}, {"Name":"SUMIT", "About":"About"}, {"Name":"SUMIT", "About":"About"}] ,"Date":"2013" , "Tech":["PHP","JavaScript", "HTML", "Flash" ],
-    "About":"","Examples":["image1.jpg","image1.jpg","image1.jpg"] },
-
-{ "Name":"Digital Signage" ,"SubName": [{"Name":"Bongo", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}], "Date":"2013" ,"Tech":["JavaScript","Flash"] ,
+{ "Name":"Digital Signage" ,"SubName": [
+    {"Name":"Bongo", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Ads", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+],
+    "Date":"2013" ,"Tech":["JavaScript","Flash"] ,
     "About":"", "Examples":["image1.jpg"]},
 
-{ "Name":"Websites" ,  "SubName": [{"Name":"Study Abroad", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}] ,"Date":"2012" , "Tech":["JavaScript","PHP","Filemaker"] ,
+{ "Name":"Websites/Elearning" ,  "SubName": [
+    {"Name":"Study Abroad Programs", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    {"Name":"Public Safety Videos", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+]
+    ,"Date":"2012" , "Tech":["JavaScript","PHP","Filemaker"] ,
     "About":"", "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
 
-{ "Name":"Rich Media Applications" ,  "SubName": [{"Name":"SUMIT", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}] ,"Date":"2010" ,"Tech":["JavaScript","Flash"] ,
-    "About":"", "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+    { "Name":"Interactive Learning" ,  "SubName": [
+        {"Name":"Radiology", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+        {"Name":"Online@Iowa", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+        {"Name":"Krispy Kreme", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+        {"Name":"Eli Lilly", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+        {"Name":"Flight Safety Boeing", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+    ]
+        ,"Date":"2012" , "Tech":["JavaScript","PHP","Filemaker"] ,
+        "About":"", "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
 
-{ "Name":"Online Learning" ,"SubName": [{"Name":"Online@Iowa", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}] , "Date":"2009" ,"Tech":["JavaScript","Flash", "Captivate"] ,
-    "About":"", "Examples":["image1.jpg"]},
 
-{ "Name":"Virtual/Augmented Reality" ,"SubName": [{"Name":"Second Life", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}] , "Date":"2007" ,"Tech":[] ,
-    "About":"" },
 
-{ "Name":"Computer Graphics" ,"SubName": [{"Name":"Flight Safety Boeing", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}], "Date":"2001" ,"Tech":["Maya","Flash", "Photoshop"] ,
-    "About":"", "Examples":["image1.jpg"]}
+
+
+    { "Name":"New Technologies" ,"SubName": [
+        {"Name":"Virtual Reality", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+        {"Name":"Augmented Reality", "About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+    ],
+        "Date":"2001" ,"Tech":["Maya","Flash", "Photoshop"] ,
+
+        "About":"", "Examples":["image1.jpg"]}
 ],
 "work": [
 {"Name":"University of Iowa", "Date":"2005-2013", "Title":"Application Developer" },

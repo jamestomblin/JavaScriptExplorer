@@ -89,7 +89,7 @@ app.NavView = Backbone.View.extend({
 
     render:function(){
       //  this.$el.html( this.template() );
-        this.footer_el.html( this.footer_template({data:this.footer}) );
+        //this.footer_el.html( this.footer_template({data:this.footer}) );
     }
 
 });
@@ -212,7 +212,7 @@ var string = "At vero eos et accusamus et iusto odio dignissimos ducimus qui bla
                 //console.log(this.model.attributes[this.options.linkroute][this.options.loc].SubName[this.options.item]);
                 this.showModal();
                 this.content_el.html( this.portfolio_content_template({data:this.model.attributes[this.options.linkroute][this.options.loc].SubName[this.options.item]}) );
-
+                $("#modalTitle").fitText();
                 break;
             case 'education':
                // this.showModal();
@@ -269,11 +269,15 @@ app.MyViewPhone = Backbone.View.extend({
     list_el: $("#list-target"),
     // Compile the template using underscore
     content_el: $("#content-target1"),
+    footer_el: $("#footer-target"),
     list_template : _.template( $("#list-template").html() ),
+
     portfolio_content_template : _.template( $("#portfolio-content-template").html() ),
     education_content_template : _.template( $("#education-content-template").html() ),
     process_content_template : _.template( $("#process-content-template").html() ),
     work_content_template : _.template( $("#work-content-template").html() ),
+
+    footer_template : _.template( $("#footer-template-back").html() ),
 
     initialize: function(options){
 
@@ -336,6 +340,8 @@ app.MyViewPhone = Backbone.View.extend({
 
 
 
+
+
     },
 
     listrender:function(){
@@ -379,6 +385,7 @@ app.MyViewPhone = Backbone.View.extend({
         setTimeout(function(){
 
             this.list_el.html( '');
+            this.footer_el.html( this.footer_template() );
 
         }.bind(this), 1000);
 
@@ -397,6 +404,7 @@ app.MyViewPhone = Backbone.View.extend({
 
 
         app_router.navigate(this.options.linkroute);
+        this.footer_el.html( '');
 
     }
 

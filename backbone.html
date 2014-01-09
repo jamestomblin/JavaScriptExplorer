@@ -66,13 +66,14 @@
 
             <div class='box'>
 
+
                 <h4 class='boxTitle' id=<%= id %>><%= data[i].Name %></h4>
 
 
 
               <%  for(var j=0; j< data[i].SubName.length; j++){   %>
               <a  href=<%= "#"+linkroute+"/"+ i  +"/item" +j%> >
-                <p><%=data[i].SubName[j].Name%></p>
+                <div class='item'><%=data[i].SubName[j].Name%></div>
               </a>
 
               <%  }%>
@@ -123,7 +124,7 @@
         </script>
 
         <script type="text/template" id="portfolio-content-template">
-          <h2><%= data.Name %></h2>
+          <h4 id='modalTitle' class='boxTitle'><%= data.Name %></h4>
 
           <%  for(var i=0; i<  data.Examples.length; i++){ %>
 
@@ -206,7 +207,11 @@
                 </div>
 
 
+        </script>
 
+        <script type="text/template" id="footer-template-back">
+
+        <h3 style="width:100%;height:100%;padding:0px;margin:0px;text-align:center;line-height:66px">Back</h3>
 
 
         </script>
