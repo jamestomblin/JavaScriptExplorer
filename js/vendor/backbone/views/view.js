@@ -77,7 +77,6 @@ app.NavView = Backbone.View.extend({
     {"Name":"photoshop", "About":"" },
     {"Name":"maya", "About":"" },
     {"Name":"backbone", "About":"" },
-    {"Name":"angular", "About":"" },
     {"Name":"adobeair", "About":"" },
     {"Name":"starling", "About":"" },
     {"Name":"codeigniter", "About":"" },
@@ -89,7 +88,7 @@ app.NavView = Backbone.View.extend({
 
     render:function(){
       //  this.$el.html( this.template() );
-        //this.footer_el.html( this.footer_template({data:this.footer}) );
+        this.footer_el.html( this.footer_template({data:this.footer}) );
     }
 
 });
@@ -270,6 +269,7 @@ app.MyViewPhone = Backbone.View.extend({
 
     list_el: $("#list-target"),
     // Compile the template using underscore
+    footer_el: $("#footer-target"),
     content_el: $("#content-target1"),
     footer_el: $("#footer-target"),
     list_template : _.template( $("#list-template").html() ),
@@ -283,6 +283,7 @@ app.MyViewPhone = Backbone.View.extend({
 
     initialize: function(options){
 
+        this.footer_el.html('');
         $('#footer-target').click(function() {
             this.hideContent();
         }.bind(this));
@@ -291,10 +292,14 @@ app.MyViewPhone = Backbone.View.extend({
         $('#hamburger').click(function() {
             if(this.hamburger == false){
                 $('#navcontainer').css('visibility', 'visible');
+                $('#navcontainer').removeClass('animated slideOutUp');
+                $('#navcontainer').addClass('animated slideInDown');
                 this.hamburger = true;
             }else{
 
-                $('#navcontainer').css('visibility', 'hidden');
+                $('#navcontainer').removeClass('animated slideInDown');
+                $('#navcontainer').addClass('animated slideOutUp');
+             //   $('#navcontainer').css('visibility', 'hidden');
                 this.hamburger = false;
             }
         }.bind(this));
@@ -386,6 +391,7 @@ app.MyViewPhone = Backbone.View.extend({
         this.list_el.html( '');
         this.content_el.html('');
 
+
     },
 
 
@@ -418,7 +424,7 @@ app.MyViewPhone = Backbone.View.extend({
 
 
         app_router.navigate(this.options.linkroute);
-        this.footer_el.html( '');
+
 
     }
 
