@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Steve Tomblin Portfolio</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
 
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main2.css">
+
         <link rel="stylesheet" href="css/custom.css">
 
 
@@ -57,10 +57,12 @@
 
              <h4 class='boxTitle' id=<%= id %>><%= data[i].Name%></h4>
 
-              <%  for(var j=0; j< data[i].SubName.length; j++){   %>
-              <a  href=<%= "#"+linkroute+"/"+ i  +"/item" +j%> >
-                <div class='item'><%=data[i].SubName[j].Name  %> <span style="font-size:.8rem"><%=' ('+ data[i].SubName[j].Date +') '%></span></div>
-              </a>
+              <%  for(var j=0; j< data[i].SubName.length; j++){  var link = "\""+"projects/"+ i+"/item" +j+"\"";  %>
+
+                <div tabindex="0" onkeypress='app.content = true ; app_router.navigate(<%=link%>, {"trigger":false}); app.view.contentRender(<%=i%>,<%=j%> );' onclick='app.content = true ; app_router.navigate(<%=link%>, {"trigger":false}); app.view.contentRender(<%=i%>,<%=j%> );' class='item' style="cursor: pointer;" >
+               <%=data[i].SubName[j].Name  %> <span style="font-size:.8rem"><%=' ('+ data[i].SubName[j].Date +') '%>
+                </div>
+
 
               <%  }%>
 
@@ -80,7 +82,7 @@
 
           <%  for(var i=0; i< data.length; i++){   var id='fittext'+i %>
 
-          <div class='box'>
+          <div class='box-long'>
 
             <h4 class='boxTitle' id=<%= id %>><%= data[i].Name %></h4>
 
@@ -99,46 +101,139 @@
 
         </script>
 
+
         <script type="text/template" id="portfolio-content-template">
-          <h4 id='modalTitle' class='boxTitle'><%= data.Name %></h4>
 
-          <%  for(var i=0; i<  data.Examples.length; i++){ %>
+        <div class='wrapper'>
 
-          <img onClick="" src="http://placehold.it/100X100" title="The Link" />
+            <h4 id='modalTitle22' class='boxTitle-Modal2'><%= data.Name %></h4>
+
+            <div>
+                <div style="width:30%; background-color:#ccc; float: left;"> Left </div>
+                <div style=" width:30%; background-color:#ccc;"> Right </div>
+            </div>
+
+
+         </div>
+
+
+
+
+
+        </script>
+
+
+
+        <script type="text/template" id="portfolio-content-template2">
+
+
+            <h4 id='modalTitle22' class='boxTitle-Modal2'><%= data.Name %></h4>
+
+
+            <div style="color:#000; height:100%; width:300px; float: left;">
+
+                <% if(data.Examples){ for(var i=0; i<  data.Examples.length; i++){ %>
+
+                <img style="padding:10px; float:left; width:300px;" src="<%=data.Examples[i] %>" title="The Link" />
+
+                <% } }%>
+
+            </div>
+            <div style="color:#000; margin:10px ;padding:10px;">
+
+                <section><%=data.About%></section>
+
+            </div>
+
+
+
+
+          <h4 id='modalTitle2' class='boxTitle-Modal2'><%= data.Name %></h4>
+
+
+          <div id='modal-container2'>
+
+            <section><%=data.About%></section>
+
+            <section>
+            <span>Tech:</span>
+
+            <ul>
+            <%  for(var i=0; i<  data.Tech.length; i++){ %>
+                <li><%= data.Tech[i] %></li>
+            <%  }%>
+            </ul>
+
+          <%  if(data.Link){ %>
+          <span><%= data.LinkDescript %></span>
+          <a href='<%= data.Link %>' target="_blank">Appliction Link</a>
+
           <%  }%>
+                  <% if(data.Examples){ for(var i=0; i<  data.Examples.length; i++){ %>
+                   <div style='margin 0 auto; width:100%'>
+                      <img  src="<%=data.Examples[i] %>" title="The Link" />
+                   </div>
+                  <% } }%>
+
+         </section>
+
+</div>
+
+
 
         </script>
 
         <script type="text/template" id="portfolio-content-template2">
 
 
-          <div style='padding:10px'>
-          <h2><%= data.Name+ " ("+data.Date+") " %></h2>
-          <h3>Tech:</h3>
-          <%  for(var i=0; i<  data.Tech.length; i++){ %>
-          <span>
-            <%=   data.Tech[i] +"," %>
-          </span>
-          <%  }%>
 
-          <h3>About:</h3>
-           <section>
-              <% //var temp =  app.usability.readability( data.About)%>
-            <%= data.About %>
-          </section>
+          <h4 id='modalTitle' class='boxTitle'><%= data.Name %></h4>
 
-           <div class='center'>
+          <div id='modal-container'>
 
-          <h3>ScreenShots:</h3>
-          <%  for(var i=0; i<  data.Examples.length; i++){ %>
-
-           <img onClick="" src="http://placehold.it/100X100" title="The Link" />
-          <%  }%>
-
-              </div>
+            <section><%= data.About %>
 
 
-           <div>
+            </section>
+
+
+
+            <section>
+              <p>Tech:</p>
+              <ul>
+                <%  for(var i=0; i<  data.Tech.length; i++){ %>
+
+                <li><%= data.Tech[i] %></li>
+                <%  }%>
+
+              </ul>
+
+
+            </section>
+
+            <section>
+
+              <%  if(data.Link){ %>
+              <p><%= data.LinkDescript %></p>
+              <a href='<%= data.Link %>' target="_blank">Appliction Link</a>
+
+              <%  }%>
+
+            </section>
+
+              <section>
+
+                  <% if(data.Examples){ for(var i=0; i<  data.Examples.length; i++){ %>
+                  <div  style='margin 0 auto; width:100%'>
+                      <img  src="<%=data.Examples[i] %>" title="The Link" />
+                  </div>
+                  <% } }%>
+
+              </section>
+
+          </div>
+
+
 
         </script>
 
@@ -198,8 +293,8 @@
 
                 <div class='container'>
 
-                    <div class='left-ham' id='hamburger'>
-                        <img src="img/ham.png">
+                    <div  style="cursor: pointer;"  class='left-ham' id='hamburger'>
+                        <img alt='dropdown menu' src="img/ham.png">
                     </div>
 
                     <div class='right'>
@@ -221,34 +316,26 @@
 
         <div class="menu">
             <div class='container center'>
+<!--
             <div id='logo'>
-                <img src="img/logo.png">
+                <img alt='logo' src="img/logo.png">
             </div>
+-->
                 <div id='navcontainer'>
                 <ul>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#process">Process</a></li>
+
+                  <a href="#projects"><li> Projects</li></a>
+                  <a href="#work"><li> Work</li></a>
+                  <a href="#education"><li > Education</li></a>
+                  <a href="#qualifications"><li>Qualifications</li></a>
+                  <a href="#process"><li >Process</li></a>
+
                 </ul>
                 </div>
         </div>
 
-
-<!--
-            <div class='container center'>
-                <div id='navcontainer'>
-                    <ul>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#work">Work</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#process">Process</a></li>
-                    </ul>
-                </div>
-                -->
-
         </div>
-        </div>
+
 
 
 
@@ -260,17 +347,20 @@
        <div id='list-target'></div>
 
 
+<!--
            <div class="md-modal " id="modal-1">
                <div class="md-content">
                    <div>
-                       <div id='content-target'></div>
-                       <button id="md-close">Close me!</button>
+
+
                    </div>
                </div>
 
            </div>
 
-           <div id="md-overlay"></div>
+           -->
+
+        <div id="md-overlay" onclick="app.view.hideModal();"></div>
 
 <script>
 
@@ -279,9 +369,12 @@
      */
 
     var num = 70; //number of pixels before modifying styles
-
+    var currentScroll= 0;
     $(window).bind('scroll', function () {
+
+      currentScroll = $(window).scrollTop();
         if ($(window).scrollTop() > num) {
+
             $('.menu').addClass('fixed');
 
         } else {
@@ -303,12 +396,6 @@
 
         <script src="js/vendor/underscore/underscore.js"></script>
         <script src="js/vendor/backbone/backbone1.1.js"></script>
-        <script src="js/vendor/fittext/fittext.js"></script>
-        <script src="js/vendor/bigtext/bigtext.js"></script>
-
-
-
-        <script src="js/vendor/spin/spin.js"></script>
 
         <script src="js/vendor/backbone/models/model.js"></script>
         <script src="js/vendor/backbone/views/view.js"></script>

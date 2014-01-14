@@ -1,77 +1,210 @@
 {
 "projects": [
 
-    { "Name":"Mobile ", "SubName": [
-        {"Name":"Sounds Of Speech", "Date":"2013-14",
-            "About":"Sounds of Speech is an iOS and Android application built with HTML5 using PhoneGap to create a native application.  It uses animations, video and audio of the proper articulation to produce the sounds of English" ,
-            "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-        {"Name":"Tower Defense Game", "Date":"2014",
-            "About":"I am currently developing a tower defense game for iOS and Android built with Starling and FeathersUI. I'm using Adobe Air to package the game as a native application" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+{ "Name":"Mobile ", "SubName": [
+    {"Name":"Sounds Of Speech", "Date":"2013-14",
+    "About":"This application was originally created in Flash 12 years ago and has been the most popular phonetics application on the web. I managed a student employee in the conversion process of the Flash animations to use png spritesheets. I rewrote the code to use HTML5 web standards. The final product is called Sounds of Speech and is the first commercially sold application by the University of Iowa in iOS and Android app stores. PhoneGap is used to create a native mobile application.  It uses animations, video and audio of the proper articulation to produce the sounds of English" ,
+    "Examples":[
+            "portfolio-images/sos/sos1.jpg",
+            "portfolio-images/sos/sos2.jpg",
+            "portfolio-images/sos/sos3.jpg",
+            "portfolio-images/sos/sos4.jpg"],
+"Tech":["PhoneGap","JavaScript", "HTML", "CreateJS" ],
+"LinkDescript":"YouTube Video of application:",
+"Link":"http://youtu.be/16b2M-YwgKs"},
+
+{"Name":"Game", "Date":"2014",
+     "About":"I am currently developing a tower defense game for iOS and Android built with Starling and FeathersUI. I'm using Adobe Air to package the game as a native application. While Flash is on the decline in many parts of the web, this is an extremely successful Flash Framework that is used by professionals to create the highest performing web and mobile games. It's currently being used by production houses and is used in games such Facebooks Angry Birds" ,
+
+     "Tech":["ActionScript", "Starling", "Adobe Air" ],
+     "LinkDescript":"Framework used:",
+     "Link":"http://gamua.com/starling/"}
     ],
-        "Date":"2013" ,"Tech":["PhoneGap","JavaScript", "HTML", "CreateJS" ],
+        "Date":"2013" ,
         "About":"","Examples":"image1.jpg"},
 
 
 { "Name":"Interactive Media" , "SubName": [
-    {"Name":"Hearing Research", "Date":"2013",
-        "About":"This application displays hundreds of video and audio files to test hearing comprehension. I used BackboneJS to stucture the JavaScript logic and Bootstrap for the UI. " ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Radiology", "Date":"2007-13",
-        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions." ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+        {"Name":"Hearing Research", "Date":"2007-13",
+        "About":"This application is for a researcher conducting experiments on hearing comprehension. It displays and syncs audio and video between two different screens and is run from a JSON data file" ,
+        "Examples":[
+            "portfolio-images/hearing/hearing1.png",
+            "portfolio-images/hearing/hearing2.png",
+            "portfolio-images/hearing/hearing3.png"],
+        "Tech":["JavaScript", "Backbone", "Bootstrap", "JSON" ],
+        "LinkDescript":"Framework used:",
+        "Link":"http://backbonejs.org/"},
+
+        {"Name":"Radiology", "Date":"2007-13",
+        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different specific learning goals application allows students to explore human anatomy and click on hotspots in order to learn about human anatomy and quiz themselves the students on vascular anatomy." ,
+        "Examples":[
+        "portfolio-images/radiology/radiology1.png",
+        "portfolio-images/radiology/radiology3.png",
+        "portfolio-images/radiology/radiology4.png",
+        "portfolio-images/radiology/radiology5.png"],
+        "Tech":["Flash", "HTML5", "Bootstrap", "JSON" ]
+        },
+
+
     {"Name":"Hancher DVD", "Date":"2006",
-        "About":"About","Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Dialects", "Date":"2006",
-        "About":"About","Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Madurese", "Date":"2009",
-        "About":"About","Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+        "About":"During the summer of 2006 I recorded HD video of Hancher events in small towns in Iowa.  Afterward the video was edited in Final Cut and a DVD was authored in Encore" ,
+        "Tech":[ "Final Cut Pro", "Encore" ],
+        "LinkDescript":"Framework used:",
+        "Link":"http://gamua.com/starling/"},
 
-]
-    ,"Date":"2013" , "Tech":["PHP","JavaScript", "HTML", "Flash" ],
+    {"Name":"Dialects", "Date":"2007",
+        "About":"This application searchs a database of videos of different dialects of Spanish provides methods to interact with the media through maps and quizzes" ,
+        "Examples":["portfolio-images/dialects/dialects1.png","portfolio-images/dialects/dialects2.png"],
+        "Tech":["ActionScript 2", "Flash"],
+        "LinkDescript":"Site Link:",
+        "Link":"http://www.uiowa.edu/~acadtech/dialects/"},
+
+    {"Name":"Madurese", "Date":"2010",
+        "About":"The University of Iowa Digital library required an application that displayed video synced with English and Madurese transcripts. Because of the fonts utilized and robuts syncing and searching needed Flash was required for a consistant experience." ,
+        "Examples":["portfolio-images/madurese/madurese1.png",
+            "portfolio-images/madurese/madurese2.png",
+            "portfolio-images/madurese/madurese3.png"],
+        "Tech":["ActionScript", "Flash", "HTML" ],
+        "LinkDescript":"Site Link:",
+        "Link":"http://madurese.lib.uiowa.edu/"}
+
+
+],
     "About":"","Examples":"portfolio-images/thumbs/icons/sumit.png" },
-
-
     { "Name":"Video Players" , "SubName": [
-        {"Name":"UI-Media Players", "Date":"2009-14","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-        {"Name":"ICON Video Uploader", "Date":"2009-13","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-        {"Name":"IGEC", "Date":"2010","About":"About","Examples":["image1.jpg","image1.jpg","image1.jpg"]}
-    ]
-        ,"Date":"2013" , "Tech":["PHP","JavaScript", "HTML", "Flash" ],
-        "About":"","Examples":"portfolio-images/thumbs/icons/sumit.png" },
 
+        {"Name":"Media Players", "Date":"2007-13",
+            "About":"." ,
+            "Examples":["image1.jpg","image1.jpg","image1.jpg"],
+            "Tech":["ActionScript", "OSMF", "MVC" ],
+            "LinkDescript":"",
+            "Link":""},
+
+        {"Name":"SUMIT", "Date":"2007-13",
+            "About":""
+            ,"Examples":[
+            "portfolio-images/sumit/sumit1.png",
+            "portfolio-images/sumit/sumit2.png",
+            "portfolio-images/sumit/sumit3.png"],
+            "Tech":["ActionScript", "OSMF", "MVC" ],
+            "LinkDescript":"Framework used:",
+            "Link":"http://gamua.com/starling/"},
+
+        {"Name":"IGEC", "Date":"2007-13",
+            "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions."
+            ,"Examples":[
+            "portfolio-images/igec/igec1.png",
+            "portfolio-images/igec/igec1.png",
+            "portfolio-images/igec/igec1.png"],
+            "Tech":["ActionScript", "OSMF", "MVC" ],
+            "LinkDescript":"Framework used:",
+            "Link":"http://gamua.com/starling/"}
+    ]
+    },
 
 { "Name":"Digital Signage" ,"SubName": [
-    {"Name":"Bongo", "Date":"2010-13","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Ads", "Date":"2010-13","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+    {"Name":"BONGO", "Date":"2007-13",
+        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions."
+        ,"Examples":["image1.jpg","image1.jpg","image1.jpg"],
+        "Tech":["ActionScript", "Starling", "Adobe Air" ],
+        "LinkDescript":"Framework used:",
+        "Link":"http://gamua.com/starling/"},
+
+    {"Name":"Ads", "Date":"2007-13",
+        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions."
+        ,"Examples":["image1.jpg","image1.jpg","image1.jpg"],
+        "Tech":["ActionScript", "Starling", "Adobe Air" ],
+        "LinkDescript":"Framework used:",
+        "Link":"http://gamua.com/starling/"}
 ],
     "Date":"2013" ,"Tech":["JavaScript","Flash"] ,
     "About":"", "Examples":["image1.jpg"]},
 
 { "Name":"Websites" ,  "SubName": [
-    {"Name":"Study Abroad Programs", "Date":"2013","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Admissions Video", "Date":"2013","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Public Safety", "Date":"2013","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+
+    {"Name":"Programs", "Date":"2007-13",
+        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions."
+        ,"Examples":["image1.jpg","image1.jpg","image1.jpg"],
+        "Tech":["ActionScript", "Starling", "Adobe Air" ],
+        "LinkDescript":"Framework used:",
+        "Link":"http://gamua.com/starling/"},
+
+
+    {"Name":"Admissions", "Date":"2007-13",
+        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions."
+        ,"Examples":[
+            "portfolio-images/admissions/admissions1.png",
+            "portfolio-images/admissions/admissions2.png"],
+        "Tech":["ActionScript", "Starling", "Adobe Air" ],
+        "LinkDescript":"Site link:",
+        "Link":"http://your.admissions.uiowa.edu/?first=Steve&last=Tomblin&zip=52245"},
+
+    {"Name":"Public Safety", "Date":"2007-13",
+        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions."
+        ,"Examples":[
+            "portfolio-images/publicsafety/public1.png"],
+        "Tech":["ActionScript", "Starling", "Adobe Air" ],
+        "LinkDescript":"Site Link:",
+        "Link":"http://cts-lamp.its.uiowa.edu/publicsafety"}
+
 ]
 ,"Date":"2012" , "Tech":["JavaScript","PHP","Filemaker"] ,
 "About":"", "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
 
 { "Name":"e-Learning" ,  "SubName": [
 
-    {"Name":"Online@Iowa", "Date":"2009","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Eli Lilly", "Date":"2005","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+    {"Name":"Online@Iowa", "Date":"2007-13",
+        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions."
+        ,"Examples":[
+        "portfolio-images/onlineiowa/online1.png",
+        "portfolio-images/onlineiowa/online2.png",
+        "portfolio-images/onlineiowa/online3.png"],
+        "Tech":["ActionScript", "Starling", "Adobe Air" ],
+        "LinkDescript":"Framework used:",
+        "Link":"http://gamua.com/starling/"},
+    {"Name":"Eli Lilly", "Date":"2007-13",
+        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions."
+        ,"Examples":["portfolio-images/lilly/lilly1.png","portfolio-images/lilly/lilly2.png","portfolio-images/lilly/lilly3.png"],
+        "Tech":["ActionScript", "Starling", "Adobe Air" ],
+        "LinkDescript":"Framework used:",
+        "Link":"http://gamua.com/starling/"}
 
 ]
-,"Date":"2012" , "Tech":["JavaScript","PHP","Filemaker"] ,
-"About":"", "Examples":["image1.jpg","image1.jpg","image1.jpg"]},
+},
 
 
-{ "Name":"Other Technologies" ,"SubName": [
-    {"Name":"Virtual Reality", "Date":"2006","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Augmented Reality", "Date":"2004","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"3D Printing Press", "Date":"2006","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"3D Demo Reel", "Date":"2002","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]},
-    {"Name":"Computer Graphics", "Date":"2001","About":"About" ,"Examples":["image1.jpg","image1.jpg","image1.jpg"]}
+{ "Name":"Other Tech" ,"SubName": [
+    {"Name":"Virtual Reality", "Date":"2007-13",
+        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions."
+        ,"Examples":["image1.jpg","image1.jpg","image1.jpg"],
+        "Tech":["ActionScript", "Starling", "Adobe Air" ],
+        "LinkDescript":"Framework used:",
+        "Link":"http://gamua.com/starling/"},
+
+    {"Name":"Augmented Reality", "Date":"2007-13",
+        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions."
+        ,"Examples":["image1.jpg","image1.jpg","image1.jpg"],
+        "Tech":["ActionScript", "Starling", "Adobe Air" ],
+        "LinkDescript":"Framework used:",
+        "Link":"http://gamua.com/starling/"},
+
+    {"Name":"3D Animation", "Date":"2007-13",
+        "About":"I've developed several applications for Radiology allowing students to navigate radiology images and interact with the anatomy. Each application accomplishes a different learning goal. The first application allows students to explore human anatomy and click on hotspots in order to learn more.  The 2nd application quizes the students on vascular anatomy. The last application provides students a way to draw and highlight there own slides. During this time I've used Flash and HTML5 to create these interactions."
+        ,"Examples":["image1.jpg","image1.jpg","image1.jpg"],
+        "Tech":["ActionScript", "Starling", "Adobe Air" ],
+        "LinkDescript":"Framework used:",
+        "Link":"http://gamua.com/starling/"},
+
+
+
+    {"Name":"Graphics", "Date":"2007-13",
+        "About":""
+        ,"Examples":["image1.jpg","image1.jpg","image1.jpg"],
+        "Tech":["ActionScript", "Starling", "Adobe Air" ],
+        "LinkDescript":"Framework used:",
+        "Link":"http://gamua.com/starling/"}
 ]
-    ,"Date":"2001" ,"Tech":["Maya","Flash", "Photoshop"] ,
-    "About":"", "Examples":["image1.jpg"]}
+   }
 ],
 "work": [
 {"Name":"University of Iowa", "Date":"2005-2013", "Title":"Application Developer" },
@@ -85,16 +218,25 @@
 {"Name":"University Of Iowa", "Date":"1995-2000", "Degree":"Studio Art, Computer Science"}
 ],
 "publications": [
-{"Name":"Indiana University", "Date":"2003-2005", "Degree":"Masters Instructional Systems Technology"},
-{"Name":"University Of Washington", "Date":"2003", "Degree":"Certificate Game Design"},
-{"Name":"University Of Iowa", "Date":"1995-2000", "Degree":"Studio Art, Computer Science"}
+{"Name":"Stuff", "Date":"2003-2005", "Degree":"Masters Instructional Systems Technology"},
+{"Name":"Teaching Phylosophy", "Date":"2003", "Degree":"Certificate Game Design"},
+{"Name":"about", "Date":"1995-2000", "Degree":"Studio Art, Computer Science"}
 ],
+
 "process": [
-{"Name":"Analysis", "About":"Design Philosphy" },
 {"Name":"Design", "About":"Design Philosphy" },
-{"Name":"Development", "About":"Development Philosophy" },
-{"Name":"Implementation", "About":"Development Philosophy" },
+{"Name":"Creativity", "About":"Design Philosphy" },
+{"Name":"Usability", "About":"Development Philosophy" },
+{"Name":"Content", "About":"Development Philosophy" },
 {"Name":"Evaluation", "About":"Development Philosophy" }
-]
+],
+
+    "qualifications": [
+        {"Name":"test", "About":"Design Philosphy" },
+        {"Name":"Design", "About":"Design Philosphy" },
+        {"Name":"Development", "About":"Development Philosophy" },
+        {"Name":"Implementation", "About":"Development Philosophy" },
+        {"Name":"Evaluation", "About":"Development Philosophy" }
+    ]
 
 }

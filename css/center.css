@@ -1,0 +1,104 @@
+html{
+    height: 100%;
+    background: url(../img/full-back2.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color:#e4e6e5;
+}
+
+.container{
+    width:700px;
+    height: 100%;
+
+}
+
+.wrapper{
+    height:100vh;
+    height: 100%;
+    background-color:#e4e6e5;
+
+}
+
+
+.wrapper {
+    height: auto !important; /* ie6 ignores !important, so this will be overridden below */
+    min-height: 100%; /* ie6 ignores min-height completely */
+    height: 100%;
+
+}
+
+.bump{
+
+    padding-top:50px;
+    padding-bottom:100px;
+
+
+}
+
+#back{
+    background-image: url('../img/back.png');
+    background-repeat:no-repeat;
+    height: 150px;
+    width:337px;
+    margin:0 auto;
+}
+
+#nav {
+
+    background-color: #093844;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    background-image: url('../img/tile.png');
+
+}
+
+#nav ul{
+
+    padding: 0px;
+    margin: 0px;
+    border-bottom: 1px solid #fff;
+    float: none;
+}
+
+.menu ul li{
+    display: inline;
+    padding: 0px 10px 0px 10px;
+    cursor: pointer; cursor: hand;
+    margin: 0px;
+}
+
+.menu {
+    background:#80A894;
+    height:35px;
+    background-image: url('../img/tile.png');
+    position:absolute;
+    top:150px;
+    width:100%;
+}
+
+.title{
+    line-height: 2rem;
+    padding:0px;
+    margin:0px;
+    color:#e3e3e3;
+    clear:BOTH;
+    font-family:  "Impact";
+    text-shadow:#222 -1px 1px 0,
+    #222 -1px 1px 0,
+    #222 -1px 1px 0,
+    #222 -1px 2px 0;
+}
+
+.right{
+    float:right;
+}
+
+.fixed {
+    position:fixed;
+    top:80px;
+}
+
+
+
